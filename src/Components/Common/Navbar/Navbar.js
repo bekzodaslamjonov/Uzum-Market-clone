@@ -54,12 +54,46 @@ export default function Navbar() {
             },
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-evenly",
+            justifyContent: {
+              xs: "space-between",
+              sm: "space-between",
+              md: "space-between",
+              lg: "space-evenly",
+              xl: "space-evenly",
+            },
           }}
         >
           {/* logo */}
           <Link to={"/"}>
-            <Box sx={{ width: "215px", height: "32px" }}>
+            <Box
+              sx={{
+                width: "215px",
+                height: "32px",
+                display: "flex",
+                alignItems: {
+                  xs: "center",
+                  sm: "center",
+                  md: "center",
+                  lg: "unset",
+                  xl: "unset",
+                },
+              }}
+            >
+              <Button
+                sx={{
+                  display: {
+                    xs: "block",
+                    sm: "block",
+                    md: "block",
+                    lg: "none",
+                    xl: "none",
+                  },
+                }}
+              >
+                <Typography sx={{ fontSize: "30px" }}>
+                  <i class="bx bx-menu"></i>
+                </Typography>
+              </Button>
               <img src={logo} alt="" />
             </Box>
           </Link>
@@ -150,7 +184,11 @@ export default function Navbar() {
 
           <Box
             sx={{
-              width: "345.43px",
+              width: {
+                md: "230px",
+                lg: "345.43px",
+                xl: "345.43px",
+              },
               height: "42px",
               display: "flex",
               alignItems: "center",
@@ -251,6 +289,8 @@ export default function Navbar() {
               xl: "38px",
             },
             display: {
+              xs: "none",
+              sm: "none",
               md: "none",
               lg: "flex",
               xl: "flex",
@@ -299,10 +339,21 @@ export default function Navbar() {
             },
             justifyContent: "center",
             alignItems: "center",
-            position:'relative'
+            position: "relative",
           }}
         >
-          <i style={{position:"absolute",left:'60px'}} class="bx bx-search"></i>
+          <Box
+            sx={{
+              position: "absolute",
+              left: {
+                xs:'10px',
+                sm:"40px",
+                md:"60px"
+              },
+            }}
+          >
+            <i class="bx bx-search"></i>
+          </Box>
 
           <input
             type="text"
