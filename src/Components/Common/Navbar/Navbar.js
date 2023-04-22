@@ -130,8 +130,63 @@ export default function Navbar() {
             </Button>
           </Box>
 
-          <Box sx={{ width: "345.43px", height: "42px" }}>
-
+          <Box
+            sx={{
+              width: "345.43px",
+              height: "42px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-evenly",
+            }}
+          >
+            <Button
+              sx={{
+                width: "auto",
+                height: "38px",
+                bgcolor: "transparent",
+                ":hover": { bgcolor: "#fafafa",},
+                gap: "10px",
+                fontSize: "20px",
+                color: "#000",
+              }}
+            >
+              <i class="bx bx-user"></i>
+              <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+                Войти
+              </Typography>
+            </Button>
+            <Button
+              sx={{
+                width: "auto",
+                height: "38px",
+                bgcolor: "transparent",
+                ":hover": { bgcolor: "#fafafa",},
+                gap: "10px",
+                fontSize: "20px",
+                color: "#000",
+              }}
+            >
+           <i class='bx bx-heart'></i>
+              <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+              Избранное
+              </Typography>
+            </Button>
+            <Button
+              sx={{
+                width: "auto",
+                height: "38px",
+                bgcolor: "transparent",
+                ":hover": { bgcolor: "#fafafa",},
+                gap: "10px",
+                fontSize: "20px",
+                color: "#000",
+              }}
+            >
+              <i class='bx bx-shopping-bag'></i>
+              <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+              Корзина
+              </Typography>
+            </Button>
           </Box>
         </Box>
         {/* navigation links */}
