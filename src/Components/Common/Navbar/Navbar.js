@@ -20,6 +20,7 @@ export default function Navbar() {
           xl: "100%",
         },
         height: {
+          lg: "130px",
           xl: "120px",
         },
         display: "flex",
@@ -37,6 +38,10 @@ export default function Navbar() {
           },
           display: "flex",
           flexDirection: "column",
+          justifyContent: {
+            lg: "space-between",
+            xl: "unset",
+          },
           gap: "10px",
         }}
       >
@@ -65,6 +70,13 @@ export default function Navbar() {
               width: "120px",
               height: "40px",
               bgcolor: "#eaeaf9",
+              display: {
+                xs: "none",
+                sm: "none",
+                md: "none",
+                lg: "flex",
+                xl: "flex",
+              },
               ":hover": { bgcolor: "#eaeaf9" },
               gap: "10px",
               fontSize: "20px",
@@ -87,7 +99,13 @@ export default function Navbar() {
               height: "38px",
               border: "1px solid",
               borderRadius: "5px",
-              display: "flex",
+              display: {
+                xs: "none",
+                sm: "none",
+                md: "none",
+                lg: "flex",
+                xl: "flex",
+              },
               justifyContent: "space-between",
               overflow: "hidden",
             }}
@@ -144,14 +162,26 @@ export default function Navbar() {
                 width: "auto",
                 height: "38px",
                 bgcolor: "transparent",
-                ":hover": { bgcolor: "#fafafa",},
+                ":hover": { bgcolor: "#fafafa" },
                 gap: "10px",
                 fontSize: "20px",
                 color: "#000",
               }}
             >
               <i class="bx bx-user"></i>
-              <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+              <Typography
+                sx={{
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  display: {
+                    xs: "none",
+                    sm: "none",
+                    md: "none",
+                    lg: "none",
+                    xl: "unset",
+                  },
+                }}
+              >
                 Войти
               </Typography>
             </Button>
@@ -160,15 +190,27 @@ export default function Navbar() {
                 width: "auto",
                 height: "38px",
                 bgcolor: "transparent",
-                ":hover": { bgcolor: "#fafafa",},
+                ":hover": { bgcolor: "#fafafa" },
                 gap: "10px",
                 fontSize: "20px",
                 color: "#000",
               }}
             >
-           <i class='bx bx-heart'></i>
-              <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
-              Избранное
+              <i class="bx bx-heart"></i>
+              <Typography
+                sx={{
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  display: {
+                    xs: "none",
+                    sm: "none",
+                    md: "none",
+                    lg: "none",
+                    xl: "unset",
+                  },
+                }}
+              >
+                Избранное
               </Typography>
             </Button>
             <Button
@@ -176,15 +218,27 @@ export default function Navbar() {
                 width: "auto",
                 height: "38px",
                 bgcolor: "transparent",
-                ":hover": { bgcolor: "#fafafa",},
+                ":hover": { bgcolor: "#fafafa" },
                 gap: "10px",
                 fontSize: "20px",
                 color: "#000",
               }}
             >
-              <i class='bx bx-shopping-bag'></i>
-              <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
-              Корзина
+              <i class="bx bx-shopping-bag"></i>
+              <Typography
+                sx={{
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  display: {
+                    xs: "none",
+                    sm: "none",
+                    md: "none",
+                    lg: "none",
+                    xl: "unset",
+                  },
+                }}
+              >
+                Корзина
               </Typography>
             </Button>
           </Box>
@@ -196,12 +250,74 @@ export default function Navbar() {
             height: {
               xl: "38px",
             },
-            display: "flex",
+            display: {
+              md: "none",
+              lg: "flex",
+              xl: "flex",
+            },
             alignItems: "center",
             justifyContent: "space-evenly",
-            bgcolor: "red",
           }}
-        ></Box>
+        >
+          <ul
+            style={{
+              width: "100%",
+              listStyle: "none",
+              display: "flex",
+              justifyContent: "space-around",
+              fontSize: "14px",
+            }}
+          >
+            <li>Электроника</li>
+            <li>Бытовая техника</li>
+            <li>Одежда</li>
+            <li>Обувь</li>
+            <li>Аксессуары</li>
+            <li>Красота</li>
+            <li>Товары для дома</li>
+            <li>Строительство и ремонт</li>
+            <li>Автотовары</li>
+            <li>Детские товары</li>
+          </ul>
+          <Button sx={{ width: "auto", fontSize: "14px" }}>
+            <Typography sx={{ fontSize: "14px", textTransform: "none" }}>
+              Ещё
+            </Typography>
+          </Button>
+        </Box>
+        <Box
+          sx={{
+            width: "100%",
+            height: "100%",
+            // bgcolor: "#f1f1f2",
+            display: {
+              xs: "flex",
+              sm: "flex",
+              md: "flex",
+              lg: "none",
+              xl: "none",
+            },
+            justifyContent: "center",
+            alignItems: "center",
+            position:'relative'
+          }}
+        >
+          <i style={{position:"absolute",left:'60px'}} class="bx bx-search"></i>
+
+          <input
+            type="text"
+            placeholder="Искать товары и категории"
+            style={{
+              width: "80%",
+              height: "34px",
+              outline: "none",
+              border: "none",
+              backgroundColor: "#f1f1f2",
+              padding: "0 41px 0 40px",
+              borderRadius: "10px",
+            }}
+          />
+        </Box>
       </Box>
     </Box>
   );

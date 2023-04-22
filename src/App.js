@@ -3,6 +3,7 @@ import React from "react";
 import Home from "./Components/Home";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Common/Navbar/Navbar";
+import Top from "./Components/Common/Top/Top";
 
 export default function App() {
   return (
@@ -11,12 +12,20 @@ export default function App() {
         width: "100vw",
         height: "auto",
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
       }}
     >
-      <Box sx={{ width: "80%", height: "auto" , }}>
-        <Navbar/>
+      <Top />
+      <Box sx={{ width: {
+        xs:'100%',
+        sm:'100%',
+        md:'100%',
+        lg:'100%',
+        xl:'80%'
+      }, height: "auto" }}>
+        <Navbar />
         <Routes>
           <Route path={"/"} element={<Home />} />
         </Routes>
