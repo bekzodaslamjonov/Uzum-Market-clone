@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import React, { useState } from "react";
 import logo from "../../../Images/image.svg";
 import { Link } from "react-router-dom";
-
+import logo2 from "../../../Images/logo2.svg";
 export default function Navbar() {
   let [collect, setCollect] = useState(true);
   let [clearB, setClearB] = useState("none");
@@ -67,7 +67,13 @@ export default function Navbar() {
           <Link to={"/"}>
             <Box
               sx={{
-                width: "215px",
+                width: {
+                  xs: "150px",
+                  sm: "180px",
+                  md: "215px",
+                  lg: "215px",
+                  xl: "215px",
+                },
                 height: "32px",
                 display: "flex",
                 alignItems: {
@@ -94,7 +100,14 @@ export default function Navbar() {
                   <i class="bx bx-menu"></i>
                 </Typography>
               </Button>
-              <img src={logo} alt="" />
+              {
+                <img
+                  width={"100%"}
+                  height={"100%"}
+                  src={window.innerWidth <= 600 ? logo2 : logo}
+                  alt=""
+                />
+              }``
             </Box>
           </Link>
           {/* Каталог btn */}
@@ -346,9 +359,9 @@ export default function Navbar() {
             sx={{
               position: "absolute",
               left: {
-                xs:'10px',
-                sm:"40px",
-                md:"60px"
+                xs: "10px",
+                sm: "40px",
+                md: "60px",
               },
             }}
           >
