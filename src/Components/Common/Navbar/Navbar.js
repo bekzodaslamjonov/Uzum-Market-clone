@@ -107,7 +107,7 @@ export default function Navbar() {
                   src={window.innerWidth <= 600 ? logo2 : logo}
                   alt=""
                 />
-              }``
+              }
             </Box>
           </Link>
           {/* Каталог btn */}

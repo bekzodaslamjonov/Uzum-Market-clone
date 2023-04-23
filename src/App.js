@@ -9,7 +9,7 @@ export default function App() {
   return (
     <Box
       sx={{
-        width: "100vw",
+        width: "100%",
         height: "auto",
         display: "flex",
         flexDirection: "column",
