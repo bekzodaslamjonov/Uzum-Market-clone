@@ -23,8 +23,20 @@ export default function Card({
   return (
     <Box
       sx={{
-        width: "232px",
-        height: "456px",
+        width: {
+          xs:'140px',
+          sm:'250px',
+          md:"279.68px",
+          lg:"273px",
+          xl:"232px"
+        },
+        height: {
+          xs:'322.66px',
+          sm:'480.61px',
+          md:'508.9px',
+          lg:'511px',
+          xl:"456px"
+        },
         borderRadius: "10px",
         display: "flex",
         flexDirection: "column",
@@ -34,6 +46,7 @@ export default function Card({
           transition: ".3s all linear",
           boxShadow: "2px 12px 20px 5px rgba(34, 60, 80, 0.2)",
         },
+       
       }}
     >
       <Box

@@ -68,6 +68,42 @@ var data = [
     descript: "Подгузники Perla Twin, 42 шт + Влажные салфетки Perla Kids...",
     prodovec: "Sofa oil",
   },
+  {
+    id: 6,
+    img: img4,
+    kredit: "960 сум/мес",
+    skidka: "10 000",
+    price: "8 000",
+    ocenka: "1",
+    star: "5.0",
+    activeIcon: false,
+    descript: "Подгузники Perla Twin, 42 шт + Влажные салфетки Perla Kids...",
+    prodovec: "Sofa oil",
+  },
+  {
+    id: 7,
+    img: img4,
+    kredit: "960 сум/мес",
+    skidka: "10 000",
+    price: "8 000",
+    ocenka: "1",
+    star: "5.0",
+    activeIcon: false,
+    descript: "Подгузники Perla Twin, 42 шт + Влажные салфетки Perla Kids...",
+    prodovec: "Sofa oil",
+  },
+  {
+    id: 8,
+    img: img4,
+    kredit: "960 сум/мес",
+    skidka: "10 000",
+    price: "8 000",
+    ocenka: "1",
+    star: "5.0",
+    activeIcon: false,
+    descript: "Подгузники Perla Twin, 42 шт + Влажные салфетки Perla Kids...",
+    prodovec: "Sofa oil",
+  },
 ];
 
 export default function Home() {
@@ -94,7 +130,13 @@ export default function Home() {
           display: "flex",
           justifyContent: "space-evenly",
           flexWrap:'wrap',
-          // gap:'30px'
+          gap:{
+            xs:'15px',
+            sm:'15px',
+            md:"0",
+            lg:'0',
+            xl:'0'
+          }
         }}
       >
         {data.length !== 0
