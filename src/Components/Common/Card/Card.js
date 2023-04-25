@@ -24,14 +24,14 @@ export default function Card({
     <Box
       sx={{
         width: {
-          xs:'140px',
+          xs:'180px',
           sm:'250px',
           md:"279.68px",
           lg:"273px",
           xl:"232px"
         },
         height: {
-          xs:'322.66px',
+          xs:'450.66px',
           sm:'480.61px',
           md:'508.9px',
           lg:'511px',
@@ -52,7 +52,13 @@ export default function Card({
       <Box
         sx={{
           width: "100%",
-          height: "309px",
+          height: {
+            xs:"249px",
+            sm:"374px",
+            md:"379px",
+            lg:"364px",
+            xl:'309px'
+          },
           bgcolor: "#efefef",
           position: "relative",
         }}
@@ -95,7 +101,7 @@ export default function Card({
             Акция
           </Typography>
         </Box>
-        <img src={img} alt="#" />
+        <img style={{width:'100%',height:'100%'}} src={img} alt="#" />
       </Box>
       <Box sx={{ width: "90%", height: "147px", marginLeft: "5%" }}>
         <Box

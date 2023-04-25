@@ -16,6 +16,9 @@ export default function Top() {
       <Box
         sx={{
           width: {
+            xs:'100%',
+            sm:'100%',
+            md:'100%',
             lg: "100%",
             xl: "80%",
           },

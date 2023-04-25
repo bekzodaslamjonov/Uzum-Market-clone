@@ -126,17 +126,10 @@ export default function Home() {
       <Box
         sx={{
           width: "100%",
-          height: "100%",
+          height: "1000px",
           display: "flex",
           justifyContent: "space-evenly",
           flexWrap:'wrap',
-          gap:{
-            xs:'15px',
-            sm:'15px',
-            md:"0",
-            lg:'0',
-            xl:'0'
-          }
         }}
       >
         {data.length !== 0
