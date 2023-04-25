@@ -1,13 +1,6 @@
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import slide1 from "../../Images/SwiperImaage1.jpg";
-import slide2 from "../../Images/SwiperImage2.jpg";
-import slide3 from "../../Images/SwiperImage3.jpg";
-import slide4 from "../../Images/SwipewerImage4.jpg";
-import slide5 from "../../Images/SwipewerImage5.jpg";
-import slide6 from "../../Images/SwipewerImage6.jpg";
-import slide7 from "../../Images/SwipewerImage7.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -29,15 +22,12 @@ import "./Slider.css";
 import { Box } from "@mui/material";
 
 export default function Slider() {
-
-
-  
   return (
     <>
       <Box
         sx={{
           width: "100%",
-          height: '460px',
+          height: "460px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -60,54 +50,59 @@ export default function Slider() {
           keyboard={true}
           modules={[Autoplay, Navigation, Pagination, Keyboard, HashNavigation]}
           className="mySwiper"
-          style={{ width: "100%", height: "50vh", borderRadius: "20px",cursor:'pointer' }}
+          style={{
+            width: "100%",
+            height: "50vh",
+            borderRadius: "20px",
+            cursor: "pointer",
+          }}
         >
           <SwiperSlide data-hash="slide1">
             <img
               style={{ width: "100%", height: "100%" }}
-              src={slide1}
+              src="https://images.uzum.uz/cgqmsq7g49devoadh810/main_page_banner.jpg"
               alt="#"
             />
           </SwiperSlide>
           <SwiperSlide data-hash="slide2">
             <img
               style={{ width: "100%", height: "100%" }}
-              src={slide2}
+              src="https://images.uzum.uz/cghdvrjfkbipbv1u94ig/main_page_banner.jpg"
               alt="#"
             />
           </SwiperSlide>
           <SwiperSlide data-hash="slide3">
             <img
               style={{ width: "100%", height: "100%" }}
-              src={slide3}
+              src="https://images.uzum.uz/cgqfulb57mg9720egung/main_page_banner.jpg"
               alt="#"
             />
           </SwiperSlide>
           <SwiperSlide data-hash="slide4">
             <img
               style={{ width: "100%", height: "100%" }}
-              src={slide4}
+              src="https://images.uzum.uz/cgqg0d357mg9720egv60/main_page_banner.jpg"
               alt="#"
             />
           </SwiperSlide>
           <SwiperSlide data-hash="slide5">
             <img
               style={{ width: "100%", height: "100%" }}
-              src={slide5}
+              src="https://images.uzum.uz/cgqfv57g49devoadeung/main_page_banner.jpg"
               alt="#"
             />
           </SwiperSlide>
           <SwiperSlide data-hash="slide6">
             <img
               style={{ width: "100%", height: "100%" }}
-              src={slide6}
+              src="https://images.uzum.uz/cgqfvnvg49devoadeuu0/main_page_banner.jpg"
               alt="#"
             />
           </SwiperSlide>
           <SwiperSlide data-hash="slide7">
             <img
               style={{ width: "100%", height: "100%" }}
-              src={slide7}
+              src="https://images.uzum.uz/cg7hqbfhj8j9g699qoa0/main_page_banner.jpg"
               alt="#"
             />
           </SwiperSlide>
