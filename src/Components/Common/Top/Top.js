@@ -16,9 +16,9 @@ export default function Top() {
       <Box
         sx={{
           width: {
-            xs:'100%',
-            sm:'100%',
-            md:'100%',
+            xs: "100%",
+            sm: "100%",
+            md: "100%",
             lg: "100%",
             xl: "80%",
           },
@@ -28,49 +28,54 @@ export default function Top() {
           gap: "18px",
         }}
       >
-        <Box sx={{width:'30%',display:{
-          xs:'none',
-          sm:"none",
-          md:'none',
-          lg:'flex',
-          xl:'flex'
-        }}}>
-
         <Box
           sx={{
-            width: "140px",
-            height: "100%",
-            display: "flex",
-            alignItems: "center",
-          }}
-          >
-          <i class="bx bx-map"></i>
-          <Typography>Город:</Typography>
-          <Typography sx={{ textDecoration: "underline", fontWeight: "600" }}>
-            Ташкент
-          </Typography>
-        </Box>
-
-         
-        <Box
-          sx={{
-            width: "140px",
-            height: "100%",
-            display: "flex",
-            alignItems: "center",
+            width: "30%",
+            display: {
+              xs: "none",
+              sm: "none",
+              md: "none",
+              lg: "flex",
+              xl: "flex",
+            },
           }}
         >
-          <Typography>Пункты выдачи</Typography>
-        </Box>
+          <Box
+            sx={{
+              width: "140px",
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Typography>
+              <i class="bx bx-map"></i>
+            </Typography>
+            <Typography>Город:</Typography>
+            <Typography sx={{ textDecoration: "underline", fontWeight: "600" }}>
+              Ташкент
+            </Typography>
+          </Box>
+
+          <Box
+            sx={{
+              width: "140px",
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Typography>Пункты выдачи</Typography>
+          </Box>
         </Box>
         <Box
           sx={{
             width: "440px",
             height: "100%",
             display: {
-              xs:'flex',
-              sm:'flex',
-              md:"flex",
+              xs: "flex",
+              sm: "flex",
+              md: "flex",
               lg: "none",
               xl: "flex",
             },
@@ -82,13 +87,18 @@ export default function Top() {
             Доставим ваш заказ бесплатно — всего за 1 день!
           </Typography>
         </Box>
-        <Box sx={{ width: "40%", display: {
-          xs:'none',
-          sm:"none",
-          md:'none',
-          lg:'flex',
-          xl:'flex'
-        } }}>
+        <Box
+          sx={{
+            width: "40%",
+            display: {
+              xs: "none",
+              sm: "none",
+              md: "none",
+              lg: "flex",
+              xl: "flex",
+            },
+          }}
+        >
           <Box
             sx={{
               width: "190px",
