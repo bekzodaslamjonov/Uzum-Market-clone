@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "./Slider/Slider";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Card from "./Common/Card/Card";
 import img from "../Images/t_product_540_high.jpg.png";
 import img1 from "../Images/t_product_541_high.jpg.png";
@@ -104,11 +104,33 @@ var data = [
     descript: "Подгузники Perla Twin, 42 шт + Влажные салфетки Perla Kids...",
     prodovec: "Sofa oil",
   },
+  {
+    id: 9,
+    img: img1,
+    kredit: "600 сум/мес",
+    skidka: "10 000 сум",
+    price: "5 000 сум",
+    ocenka: "5",
+    star: "5.0",
+    activeIcon: false,
+    descript: "Cтиральный порошок Tide Color, Lenor Touch,...",
+    prodovec: "Sofa oil",
+  },
+  {
+    id: 10,
+    img: img1,
+    kredit: "600 сум/мес",
+    skidka: "10 000 сум",
+    price: "5 000 сум",
+    ocenka: "5",
+    star: "5.0",
+    activeIcon: false,
+    descript: "Cтиральный порошок Tide Color, Lenor Touch,...",
+    prodovec: "Sofa oil",
+  },
 ];
 
 export default function Home() {
-
-
   const buyBtn = (index) => {
     // let obj = data[index];
     // newData.push(obj);
@@ -117,21 +139,32 @@ export default function Home() {
     // data[index].activeIcon = !data[index].activeIcon;
   };
 
-
-
   return (
-    <Box sx={{display:'flex',flexDirection:'column'}}>
+    <Box sx={{ width: "100%",
+    height: "1500px", display: "flex", flexDirection: "column" }}>
       <Slider />
 
       <Box
         sx={{
           width: "100%",
-          height: "1000px",
+          height: "100%",
           display: "flex",
           justifyContent: "space-evenly",
-          flexWrap:'wrap',
+          flexWrap: "wrap",
         }}
       >
+        <Box
+          sx={{
+            width: "100%",
+            height: "50px",
+            display: "flex",
+            alignItems: "center",
+            gap:'10px'
+          }}
+        >
+          <Typography sx={{ fontSize: "28px" }}>Хаитлик</Typography>
+          <i style={{fontSize: "30px"}} class="bx bx-chevron-right"></i>
+        </Box>
         {data.length !== 0
           ? data.map((item, index) => (
               <Card
@@ -149,9 +182,7 @@ export default function Home() {
             ))
           : ""}
       </Box>
-          <Box sx={{width:'100%',height:"1000px"}}>
-
-          </Box>
+      {/* <Box sx={{ width: "100%", height: "1000px" }}></Box> */}
     </Box>
   );
 }

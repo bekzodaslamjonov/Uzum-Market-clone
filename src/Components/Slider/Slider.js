@@ -60,7 +60,7 @@ export default function Slider() {
           keyboard={true}
           modules={[Autoplay, Navigation, Pagination, Keyboard, HashNavigation]}
           className="mySwiper"
-          style={{ width: "100%", height: "413px", borderRadius: "20px" }}
+          style={{ width: "100%", height: "413px", borderRadius: "20px",cursor:'pointer' }}
         >
           <SwiperSlide data-hash="slide1">
             <img
