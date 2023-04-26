@@ -131,7 +131,7 @@ export default function Card({
         <Box
           sx={{
             width: "50%",
-            height: "20px",
+            height: "15px",
             borderRadius: "10px",
             bgcolor: "#FFFF00",
             display: "flex",
@@ -143,14 +143,14 @@ export default function Card({
         <Box
           sx={{
             width: "100%",
-            height: "43px",
+            height: "30px",
             display: "flex",
             alignItems: "end",
             justifyContent: "space-between",
             position: "relative",
           }}
         >
-          <Box sx={{ width: "77px", height: "20px" }}>
+          <Box sx={{ width: "auto", height: "20px" }}>
             <Typography
               sx={{ fontSize: "11px", textDecoration: "line-through" }}
             >

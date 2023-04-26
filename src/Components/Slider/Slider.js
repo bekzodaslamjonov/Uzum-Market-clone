@@ -27,7 +27,7 @@ export default function Slider() {
       <Box
         sx={{
           width: "100%",
-          height: "460px",
+          height: "50vh",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

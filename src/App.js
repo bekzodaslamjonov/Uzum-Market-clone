@@ -10,7 +10,7 @@ export default function App() {
     <Box
       sx={{
         width: "100%",
-        height: "auto",
+        Height: "auto",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -24,7 +24,7 @@ export default function App() {
         md:'100%',
         lg:'100%',
         xl:'80%'
-      }, height: "auto" }}>
+      }, minHeight: "150vh" }}>
         <Navbar />
         <Routes>
           <Route path={"/"} element={<Home />} />
