@@ -1,19 +1,23 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, List, Modal, Typography } from "@mui/material";
 import React, { useState } from "react";
 import logo from "../../../Images/image.svg";
 import { Link } from "react-router-dom";
+// import {Link } from "@mui/material";
 import logo2 from "../../../Images/logo2.svg";
+import "./Navbar.css";
 export default function Navbar() {
   let [collect, setCollect] = useState(true);
   let [clearB, setClearB] = useState("none");
-
+  // let [openM,setOpenM]=useState(true)
   let collectBtn = () => {
     setCollect(!collect);
+    // setOpenM(!openM)
   };
   let inputChang = () => {
     setClearB("block");
   };
   return (
+    <>
     <Box
       sx={{
         width: {
@@ -321,7 +325,11 @@ export default function Navbar() {
               fontSize: "14px",
             }}
           >
-            <li>Электроника</li>
+            {/* <Link href="#" underline="hover"> */}
+              {/* {'underline="hover"'} */}
+              <li>Электроника</li>
+            {/* </Link> */}
+
             <li>Бытовая техника</li>
             <li>Одежда</li>
             <li>Обувь</li>
@@ -384,5 +392,17 @@ export default function Navbar() {
         </Box>
       </Box>
     </Box>
+    {/* <Modal
+      open={openM}
+      sx={{position:'fixed'}} 
+    >
+      <Box sx={{width:"100vw",height:'100vh',bgcolor:"#fff"}}>
+            <Button onClick={collectBtn}>
+            ❌
+
+            </Button>
+      </Box>
+    </Modal> */}
+    </>
   );
 }

@@ -34,7 +34,7 @@ export default function Slider() {
         }}
       >
         <Swiper
-          spaceBetween={30}
+          spaceBetween={0}
           navigation={true}
           pagination={{
             clickable: true,
