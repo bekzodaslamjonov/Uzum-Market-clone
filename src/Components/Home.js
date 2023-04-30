@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 
 import Hayitlik from "./Hayitlik";
 import Rasrochka from "./Rasrochka";
+import Bazar from "./Bazar";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Slider />
         <Hayitlik />
         <Rasrochka />
+        <Bazar/>
       </Box>
     </>
   );
