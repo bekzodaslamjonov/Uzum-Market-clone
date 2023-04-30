@@ -1,9 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Card from "./Common/Card/Card";
 import axios from "axios";
 import { Api } from "../Api/Api";
+import Slides from "./Common/Slide/Slides";
 
 export default function Rasrochka() {
   const [product, setProduct] = useState([]);
@@ -53,33 +53,7 @@ export default function Rasrochka() {
           <i style={{ fontSize: "30px" }} class="bx bx-chevron-right"></i>
         </Link>
       </Box>
-      <Box
-        sx={{
-          width: "100%",
-          height: "auto",
-          display: "flex",
-          justifyContent: "space-evenly",
-          flexWrap: "wrap",
-          gap: "10px",
-        }}
-      >
-        {product.length !== 0
-          ? product.map((item, index) => (
-              <Card
-                key={index}
-                img={item.img}
-                kredit={item.kredit}
-                skidka={item.skidka}
-                price={item.price}
-                ocenka={item.ocenka}
-                star={item.star}
-                icon={item.activeIcon}
-                descript={item.descript}
-                // buyBtn={() => buyBtn(index)}
-              />
-            ))
-          : ""}
-      </Box>
+      <Slides product={product}/>
     </>
   );
 }

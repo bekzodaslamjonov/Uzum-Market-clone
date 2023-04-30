@@ -22,7 +22,6 @@ export default function Home() {
         <Hayitlik />
         <Rasrochka />
         <Bazar/>
-        <Slides/>
       </Box>
     </>
   );
