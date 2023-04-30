@@ -4,6 +4,7 @@ import Home from "./Components/Home";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Common/Navbar/Navbar";
 import Top from "./Components/Common/Top/Top";
+import NotFound from "./Components/Common/NotFound";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path={"/"} element={<Home />} />
+          <Route path={"*"} element={<NotFound />} />
         </Routes>
       </Box>
     </Box>

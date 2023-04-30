@@ -15,13 +15,6 @@ export default function Hayitlik() {
       .then((res) => setProduct(res.data));
   }, []);
 
-  //   const buyBtn = (index) => {
-  //     // let obj = data[index];
-  //     // newData.push(obj);
-  //     // localStorage.setItem("karzina", JSON.stringify(newData));
-  //     // setBadgeval(JSON.parse(localStorage.getItem("karzina")).length);
-  //     // data[index].activeIcon = !data[index].activeIcon;
-  //   };
   const showAll = () => {
     axios
       .get(Api + "hayitlik/?_start=0&_limit=40")

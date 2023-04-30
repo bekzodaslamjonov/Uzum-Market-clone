@@ -340,7 +340,9 @@ export default function Navbar() {
             <li>Автотовары</li>
             <li>Детские товары</li>
           </ul>
-          <Button sx={{ width: "auto", fontSize: "14px" }}>
+          <Button 
+            onClick={collectBtn}
+          sx={{ width: "auto", fontSize: "14px" }}>
             <Typography sx={{ fontSize: "14px", textTransform: "none" }}>
               Ещё
             </Typography>
