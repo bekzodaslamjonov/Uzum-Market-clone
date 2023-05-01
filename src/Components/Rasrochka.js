@@ -6,9 +6,13 @@ import { Api } from "../Api/Api";
 import Slides from "./Common/Slide/Slides";
 
 export default function Rasrochka() {
-  const [product, setProduct] = useState([]);
+  const [product1, setProduct1] = useState([]);
   useEffect(() => {
-    axios.get(Api + "rasrochka").then((res) => setProduct(res.data));
+    axios.get(Api + "rasrochka/?_start=0&_limit=5").then((res) => setProduct1(res.data));
+  }, []);
+  const [product2, setProduct2] = useState([]);
+  useEffect(() => {
+    axios.get(Api + "rasrochka/?_start=5&_limit=10").then((res) => setProduct2(res.data));
   }, []);
   return (
     <>
@@ -53,7 +57,7 @@ export default function Rasrochka() {
           <i style={{ fontSize: "30px" }} class="bx bx-chevron-right"></i>
         </Link>
       </Box>
-      <Slides product={product}/>
+      <Slides product1={product1} product2={product2}/>
     </>
   );
 }

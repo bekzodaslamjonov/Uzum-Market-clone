@@ -46,7 +46,7 @@ export default function Slider() {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          mousewheel={true}
+          // mousewheel={true}
           keyboard={true}
           modules={[Autoplay, Navigation, Pagination, Keyboard, HashNavigation]}
           className="mySwiper"
