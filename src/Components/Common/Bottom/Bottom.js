@@ -22,10 +22,12 @@ export default function Bottom() {
         }}
       >
         <Box sx={{display:'flex',gap:'10px'}}>
-          <Typography>Соглашение о конфиденциальности</Typography>
-          <Typography>Пользовательское соглашение</Typography>
+          <Typography sx={{fontSize:{
+            xl:'14px'
+          },fontWeight:'600'}}>Соглашение о конфиденциальности</Typography>
+          <Typography sx={{fontSize:'14px',fontWeight:'600'}}>Пользовательское соглашение</Typography>
         </Box>
-        <Typography>
+        <Typography sx={{fontSize:'11px'}}>
           «2023© ИП ООО «UZUM MARKET». ИНН 309376127. Все права защищены»
         </Typography>
       </Box>
