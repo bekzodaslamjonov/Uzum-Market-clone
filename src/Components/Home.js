@@ -4,7 +4,7 @@ import { Box, } from "@mui/material";
 import Hayitlik from "./Hayitlik";
 import Rasrochka from "./Rasrochka";
 import Bazar from "./Bazar";
-import EXXxample from "./EXXxample";
+
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
         <Hayitlik />
         <Rasrochka />
         <Bazar/>
-        {/* <EXXxample/> */}
+        <Hayitlik/>
       </Box>
     </>
   );

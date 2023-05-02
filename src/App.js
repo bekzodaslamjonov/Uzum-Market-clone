@@ -11,7 +11,7 @@ import Hayitlik from "./Components/Hayitlik";
 
 export default function App() {
   return (
-    <Box
+    <Box  
       sx={{
         width: "100%",
         Height: "auto",
@@ -23,18 +23,19 @@ export default function App() {
     >
       <Top />
       <Box sx={{ width: {
-        xs:'100%',
+        xs:'100%', 
         sm:'100%',
         md:'100%',
         lg:'100%',
         xl:'80%'
       }, minHeight: "150vh" }}>
         <Navbar />
+        <>
         <Routes>
           <Route path={"/"} element={<Home />} />
           <Route path={"*"} element={<NotFound />} />
         </Routes>
-        <Hayitlik/>
+        </>
         <FooterSmall/>
         <Footer/>
       </Box>
