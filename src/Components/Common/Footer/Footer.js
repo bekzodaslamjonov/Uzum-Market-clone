@@ -9,7 +9,13 @@ import you from "../../../Images/youtube-icon-logo-svgrepo-com.svg";
 import face from "../../../Images/facebook-icon-logo-svgrepo-com.svg";
 export default function Footer() {
   return (
-    <>
+    <Box sx={{display:{ 
+      xs:'none',
+      sm:'none',
+      md:'none',
+      lg:'flex',
+      xl:'flex'
+    },flexDirection:'column'}}>
       <Box
         sx={{
           width: "100%",
@@ -252,6 +258,6 @@ export default function Footer() {
         </Box>
       </Box>
       <Bottom />
-    </>
+    </Box>
   );
 }
