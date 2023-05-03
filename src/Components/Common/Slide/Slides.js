@@ -4,13 +4,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper";
 import { Box } from "@mui/material";
-import SmallCard from "../Card/SmallCard";
 import "./Slides.css";
+import Card from "../Card/SmallCard";
 export default function Slides({ product1, product2 }) {
-  // const [product, setProduct] = useState([]);
-  // useEffect(() => {
-  //   axios.get(Api + "rasrochka").then((res) => setProduct(res.data));
-  // }, []);
+  var slide1 = product1[0];
+  var slide2 = product1[1];
+  var slide3 = product1[2];
+  var slide4 = product1[3];
+  var slide5 = product1[4];
+  var slide6 = product2[0];
   return (
     <>
       <Box
@@ -30,119 +32,95 @@ export default function Slides({ product1, product2 }) {
             height: "100%",
           }}
           navigation={true}
-          slidesPerView={1}
+          slidesPerView={5}
           spaceBetween={10}
           pagination={false}
           modules={[Pagination, Navigation]}
-          // className="mySwiper"
+          // breakpoints={{
+          //   // when window width is >= 640px
+          //   640: {
+          //     width: 640,
+          //     slidesPerView: 1,
+          //   },
+          //   // when window width is >= 768px
+          //   1200: {
+          //     width: 1200,
+          //     slidesPerView: 4,
+          //   },
+          // }}
         >
-          <SwiperSlide
-            style={{
-              width: "100vw",
-              height: "100%",
-            }}
-          >
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                display: "flex",
-                justifyContent: "space-around",
-              }}
-            >
-              {product1.splice(5, 10)
-                ? product1.map((item, index) => (
-                    <SmallCard
-                      key={index}
-                      img={item.img}
-                      kredit={item.kredit}
-                      skidka={item.skidka}
-                      price={item.price}
-                      ocenka={item.ocenka}
-                      star={item.star}
-                      icon={item.activeIcon}
-                      descript={item.descript}
-                      // buyBtn={() => buyBtn(index)}
-                    />
-                  ))
-                : ""}
-            </Box>
+          <SwiperSlide>
+            <Card
+              img={slide1.img}
+              kredit={slide1.kredit}
+              skidka={slide1.skidka}
+              price={slide1.price}
+              ocenka={slide1.ocenka}
+              star={slide1.star}
+              icon={slide1.activeIcon}
+              descript={slide1.descript}
+            />
           </SwiperSlide>
-          <SwiperSlide
-            style={{
-              width: "100vw",
-              height: "auto",
-              display: "flex",
-              justifyContent: "space-evenly",
-            }}
-          >
-            {product2.lenght !== 0
-              ? product2.map((item, index) => (
-                  <SmallCard
-                    key={index}
-                    img={item.img}
-                    kredit={item.kredit}
-                    skidka={item.skidka}
-                    price={item.price}
-                    ocenka={item.ocenka}
-                    star={item.star}
-                    icon={item.activeIcon}
-                    descript={item.descript}
-                    // buyBtn={() => buyBtn(index)}
-                  />
-                ))
-              : ""}
+          <SwiperSlide>
+            <Card
+              img={slide2.img}
+              kredit={slide2.kredit}
+              skidka={slide2.skidka}
+              price={slide2.price}
+              ocenka={slide2.ocenka}
+              star={slide2.star}
+              icon={slide2.activeIcon}
+              descript={slide2.descript}
+            />
           </SwiperSlide>
-          {/* <SwiperSlide
-            style={{
-              width: "100vw",
-              height: "auto",
-              display: "flex",
-              justifyContent: "space-evenly",
-            }}
-          >
-            {product.splice(1, 5)
-              ? product.map((item, index) => (
-                  <Card
-                    key={index}
-                    img={item.img}
-                    kredit={item.kredit}
-                    skidka={item.skidka}
-                    price={item.price}
-                    ocenka={item.ocenka}
-                    star={item.star}
-                    icon={item.activeIcon}
-                    descript={item.descript}
-                    // buyBtn={() => buyBtn(index)}
-                  />
-                ))
-              : ""}
+          <SwiperSlide>
+            <Card
+              img={slide3.img}
+              kredit={slide3.kredit}
+              skidka={slide3.skidka}
+              price={slide3.price}
+              ocenka={slide3.ocenka}
+              star={slide3.star}
+              icon={slide3.activeIcon}
+              descript={slide3.descript}
+            />
           </SwiperSlide>
-          <SwiperSlide
-            style={{
-              width: "100vw",
-              height: "auto",
-              display: "flex",
-              justifyContent: "space-evenly",
-            }}
-          >
-            {product.splice(5, 10)
-              ? product.map((item, index) => (
-                  <Card
-                    key={index}
-                    img={item.img}
-                    kredit={item.kredit}
-                    skidka={item.skidka}
-                    price={item.price}
-                    ocenka={item.ocenka}
-                    star={item.star}
-                    icon={item.activeIcon}
-                    descript={item.descript}
-                    // buyBtn={() => buyBtn(index)}
-                  />
-                ))
-              : ""}
-          </SwiperSlide> */}
+          <SwiperSlide>
+            <Card
+              img={slide4.img}
+              kredit={slide4.kredit}
+              skidka={slide4.skidka}
+              price={slide4.price}
+              ocenka={slide4.ocenka}
+              star={slide4.star}
+              icon={slide4.activeIcon}
+              descript={slide4.descript}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card
+              img={slide5.img}
+              kredit={slide5.kredit}
+              skidka={slide5.skidka}
+              price={slide5.price}
+              ocenka={slide5.ocenka}
+              star={slide5.star}
+              icon={slide5.activeIcon}
+              descript={slide5.descript}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card
+              img={slide6.img}
+              kredit={slide6.kredit}
+              skidka={slide6.skidka}
+              price={slide6.price}
+              ocenka={slide6.ocenka}
+              star={slide6.star}
+              icon={slide6.activeIcon}
+              descript={slide6.descript}
+            />
+          </SwiperSlide>
         </Swiper>
       </Box>
     </>

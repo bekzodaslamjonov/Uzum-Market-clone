@@ -14,6 +14,7 @@ export default function Rasrochka() {
   useEffect(() => {
     axios.get(Api + "rasrochka/?_start=5&_limit=10").then((res) => setProduct2(res.data));
   }, []);
+  console.log(product1,product2);
   return (
     <>
       <Box
