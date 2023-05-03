@@ -3,18 +3,13 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { Api } from "../Api/Api";
-import Slides from "./Common/Slide/Slides";
+import Slides from "./Common/Slides/Slides";
 
 export default function Rasrochka() {
-  const [product1, setProduct1] = useState([]);
+  const [product, setProduct] = useState([]);
   useEffect(() => {
-    axios.get(Api + "rasrochka/?_start=0&_limit=5").then((res) => setProduct1(res.data));
+    axios.get(Api + "rasrochka/?_start=0&_limit=10").then((res) => setProduct(res.data));
   }, []);
-  const [product2, setProduct2] = useState([]);
-  useEffect(() => {
-    axios.get(Api + "rasrochka/?_start=5&_limit=10").then((res) => setProduct2(res.data));
-  }, []);
-  console.log(product1,product2);
   return (
     <>
       <Box
@@ -58,7 +53,7 @@ export default function Rasrochka() {
           <i style={{ fontSize: "30px" }} class="bx bx-chevron-right"></i>
         </Link>
       </Box>
-      <Slides product1={product1} product2={product2}/>
+      <Slides product={product} />
     </>
   );
 }
