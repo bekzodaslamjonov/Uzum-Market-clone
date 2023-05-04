@@ -31,12 +31,10 @@ export default function Slides({ product}) {
           pagination={false}
           modules={[Pagination, Navigation]}
           breakpoints={{
-            // when window width is >= 640px
             640: {
               width: 640,
               slidesPerView: 1,
             },
-            // when window width is >= 768px
             1200: {
               width: 1200,
               slidesPerView: 4,

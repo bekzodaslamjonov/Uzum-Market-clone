@@ -7,6 +7,7 @@ import axios from "axios";
 import Slides from "./Common/Slides/Slides";
 
 export default function Bazar() {
+  
   const [product, setProduc] = useState([]);
   useEffect(() => {
     axios.get(Api + "bazar/?_start=0&_limit=10").then((res) => setProduc(res.data));
