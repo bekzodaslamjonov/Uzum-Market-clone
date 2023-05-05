@@ -1,7 +1,7 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React, { useState } from "react";
 
-export default function Card({
+export default function SmallCard({
   img,
   kredit,
   skidka,
@@ -21,16 +21,16 @@ export default function Card({
     <Box
       sx={{
         width: {
-          xs: "180px",
-          sm: "250px",
-          md: "279.68px",
+          xs: "140px",
+          sm: "140px",
+          md: "171px",
           lg: "273px",
           xl: "232px",
         },
         height: {
-          xs: "450.66px",
-          sm: "480.61px",
-          md: "508.9px",
+          xs: "322.66px",
+          sm: "322.66px",
+          md: "363.99px",
           lg: "511px",
           xl: "456px",
         },
@@ -48,9 +48,9 @@ export default function Card({
         sx={{
           width: "100%",
           height: {
-            xs: "249px",
-            sm: "374px",
-            md: "379px",
+            xs: "186.66px",
+            sm: "186.66px",
+            md: "227.99px",
             lg: "364px",
             xl: "309px",
           },
@@ -95,9 +95,16 @@ export default function Card({
         <Box
           sx={{
             width: "100%",
-            height: "40px",
+            height: {
+              xs:'50px',
+              sm:"50px",
+              md:'40px',
+              lg:'40px',
+              xl:'40px'
+            },
             display: "flex",
             alignItems: "center",
+            overflow:'hidden'
           }}
         >
           <Typography sx={{ fontSize: "11px" }}>{descript}</Typography>
@@ -118,9 +125,9 @@ export default function Card({
         </Box>
         <Box
           sx={{
-            width: "50%",
+            width: "70%",
             height: "15px",
-            borderRadius: "10px",
+            borderRadius: "6px",
             bgcolor: "#FFFF00",
             display: "flex",
             justifyContent: "center",
@@ -131,33 +138,49 @@ export default function Card({
         <Box
           sx={{
             width: "100%",
-            height: "30px",
+            height: "40px",
             display: "flex",
             alignItems: "end",
             justifyContent: "space-between",
             position: "relative",
           }}
         >
-          <Box sx={{ width: "auto", height: "20px" }}>
+          <Box sx={{ width: "auto", height: "70%" }}>
             <Typography
               sx={{ fontSize: "11px", textDecoration: "line-through" }}
             >
               {skidka}
             </Typography>
-            <Typography sx={{ fontSize: "15px" }}>{price}</Typography>
-          </Box>
-          <Button
-            onClick={buyBtn}
-            sx={{ position: "absolute", bottom: "-15px", right: "0" }}
-          >
-            <Typography sx={{ fontSize: "28px" }}>
-              {icon ? (
-                <i class="bx bx-shopping-bag"></i>
-              ) : (
-                <i class="bx bx-cart-add"></i>
-              )}
+            <Typography
+              sx={{
+                fontSize: {
+                  xs:'10px',
+                  sm:'10px',
+                  md: "10px",
+                  lg: "15px",
+                  xl: "15px",
+                },
+              }}
+            >
+              {price}
             </Typography>
-          </Button>
+          </Box>
+          <Typography
+            onClick={buyBtn}
+            sx={{
+              fontSize: "28px",
+              position: "absolute",
+              bottom: "-15px",
+              right: "0",
+            }}
+          >
+            {icon ? (
+              <i class="bx bx-shopping-bag"></i>
+            ) : (
+              <i class="bx bx-cart-add"></i>
+            )}
+          </Typography>
+          
         </Box>
       </Box>
     </Box>

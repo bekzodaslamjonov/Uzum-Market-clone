@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { Api } from "../Api/Api";
 import Slides from "./Common/Slides/Slides";
+import SmallCard from "./Common/Card/SmallCard";
 
 export default function Rasrochka() {
   const [product, setProduct] = useState([]);
@@ -54,6 +55,7 @@ export default function Rasrochka() {
         </Link>
       </Box>
       <Slides product={product} />
+      
     </>
   );
 }

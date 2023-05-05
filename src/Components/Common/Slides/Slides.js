@@ -5,14 +5,17 @@ import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper";
 import { Box } from "@mui/material";
 import "./Slides.css";
-import Card from "../Card/SmallCard";
-export default function Slides({ product}) {
+import SmallCard from "../Card/SmallCard";
+export default function Slides({ product }) {
   return (
     <>
       <Box
         sx={{
           width: "100%",
           height: {
+            xs:'50vh',
+            sm:'60vh',
+            md:'60vh',
             lg: "100vh",
             xl: "70vh",
           },
@@ -31,20 +34,32 @@ export default function Slides({ product}) {
           pagination={false}
           modules={[Pagination, Navigation]}
           breakpoints={{
-            640: {
-              width: 640,
-              slidesPerView: 1,
+            400: {
+              width: 900,
+              slidesPerView: 6,
+            },
+            600: {
+              width: 900,
+              slidesPerView: 6,
+            },
+            900: {
+              width: 900,
+              slidesPerView: 5,
             },
             1200: {
               width: 1200,
               slidesPerView: 4,
+            },
+            1536: {
+              width: 1536,
+              slidesPerView: 6.3,
             },
           }}
         >
           {product.length !== 0
             ? product.map((item, index) => (
                 <SwiperSlide>
-                  <Card
+                  <SmallCard
                     key={index}
                     img={item.img}
                     kredit={item.kredit}
