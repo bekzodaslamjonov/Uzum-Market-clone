@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { Api } from "../Api/Api";
 import Slides from "./Common/Slides/Slides";
-import SmallCard from "./Common/Card/SmallCard";
 
 export default function Rasrochka() {
   const [product, setProduct] = useState([]);
@@ -16,7 +15,13 @@ export default function Rasrochka() {
       <Box
         sx={{
           width: "100%",
-          height: "50vh",
+          height: {
+            xs:'40vh',
+            sm:"35vh",
+            md:'50vh',
+            lg:'50vh',
+            xl:'50vh'
+          },
           borderRadius: "10px",
           overflow: "hidden",
           ":hover img": {

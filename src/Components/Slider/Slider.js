@@ -27,7 +27,13 @@ export default function Slider() {
       <Box
         sx={{
           width: "100%",
-          height: "50vh",
+          height: {
+            xs:'40vh',
+            sm:'40vh',
+            md:'50vh',
+            lg:'50vh',
+            xl:'50vh'
+          },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -42,22 +48,39 @@ export default function Slider() {
           hashNavigation={{
             watchState: true,
           }}
+          breakpoints={{
+            900: {
+              width: 900,
+              slidesPerView: 1,
+            },
+            1200: {
+              width: 1200,
+              slidesPerView: 1,
+            },
+            1536: {
+              width: 1536,
+              slidesPerView:1
+            }}}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
-          // mousewheel={true}
           keyboard={true}
           modules={[Autoplay, Navigation, Pagination, Keyboard, HashNavigation]}
           className="mySwiper"
           style={{
             width: "100%",
-            height: "50vh",
+            height: {
+              sm:'40vh',
+              md:'40vh',
+              lg:'40vh',
+              xl:"50vh"
+            },
             borderRadius: "20px",
             cursor: "pointer",
           }}
         >
-          <SwiperSlide data-hash="slide1">
+          <SwiperSlide  data-hash="slide1">
             <img
               style={{ width: "100%", height: "100%" }}
               src="https://images.uzum.uz/cgqmsq7g49devoadh810/main_page_banner.jpg"

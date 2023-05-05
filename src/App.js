@@ -7,7 +7,7 @@ import Top from "./Components/Common/Top/Top";
 import NotFound from "./Components/Common/NotFound";
 import Footer from "./Components/Common/Footer/Footer";
 import FooterSmall from "./Components/Common/Footer/FooterSmall";
-import Hayitlik from "./Components/Hayitlik";
+
 
 export default function App() {
   return (
@@ -23,10 +23,10 @@ export default function App() {
     >
       <Top />
       <Box sx={{ width: {
-        xs:'100%', 
-        sm:'100%',
-        md:'100%',
-        lg:'100%',
+        xs:'95%', 
+        sm:'95%',
+        md:'95%',
+        lg:'95%',
         xl:'80%'
       }, minHeight: "150vh" }}>
         <Navbar />

@@ -1,7 +1,7 @@
 .swiper-button-prev {
     font-weight: 900;
     --swiper-navigation-size: 20px;
-    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-top-offset: 50% !important;
     --swiper-navigation-sides-offset: 30px;
     --swiper-navigation-color: #000;
 }
@@ -27,7 +27,7 @@
 .swiper-button-next {
     font-weight: 900;
     --swiper-navigation-size: 20px;
-    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-top-offset: 50% !important;
     --swiper-navigation-sides-offset: 30px;
     --swiper-navigation-color: #000;
 }
