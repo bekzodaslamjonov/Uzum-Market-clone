@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper";
 import { Box } from "@mui/material";
-// import "./Slides.css";
+import "../../Slider/Slider.css";
 import SmallCard from "../Card/SmallCard";
 export default function Slides({ product }) {
   return (

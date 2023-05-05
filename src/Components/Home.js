@@ -21,7 +21,6 @@ export default function Home() {
         <Hayitlik />
         <Rasrochka />
         <Bazar/>
-        <Hayitlik/>
       </Box>
     </>
   );

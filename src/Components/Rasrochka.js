@@ -16,7 +16,7 @@ export default function Rasrochka() {
         sx={{
           width: "100%",
           height: {
-            xs:'40vh',
+            xs:'30vh',
             sm:"35vh",
             md:'50vh',
             lg:'50vh',
