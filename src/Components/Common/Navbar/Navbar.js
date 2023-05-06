@@ -1,16 +1,16 @@
-import { Box, Button,  Modal, Typography } from "@mui/material";
+import { Box, Button, Modal, Typography } from "@mui/material";
 import React, { useState } from "react";
 import logo from "../../../Images/image.svg";
 import { Link } from "react-router-dom";
 import logo2 from "../../../Images/logo2.svg";
 import LogIn from "../Authentication/LogIn";
+import SwipeableTemporaryDrawer from "./TopDrawer";
 export default function Navbar() {
-  let [collect, setCollect] = useState(true);
+  let [collect, setCollect] = useState(false);
   let [clearB, setClearB] = useState("none");
   let [openL, setOpenL] = useState(false);
   let collectBtn = () => {
     setCollect(!collect);
-    // setOpenM(!openM)
   };
   let inputChang = () => {
     setClearB("block");
@@ -140,9 +140,9 @@ export default function Navbar() {
               }}
             >
               {!collect ? (
-                <i class="bx bx-x"></i>
-              ) : (
                 <i class="bx bx-collection"></i>
+              ) : (
+                <i class="bx bx-x"></i>
               )}
               <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
                 Каталог
@@ -331,11 +331,7 @@ export default function Navbar() {
                 fontSize: "14px",
               }}
             >
-              {/* <Link href="#" underline="hover"> */}
-              {/* {'underline="hover"'} */}
               <li>Электроника</li>
-              {/* </Link> */}
-
               <li>Бытовая техника</li>
               <li>Одежда</li>
               <li>Обувь</li>
@@ -359,7 +355,6 @@ export default function Navbar() {
             sx={{
               width: "100%",
               height: "100%",
-              // bgcolor: "#f1f1f2",
               display: {
                 xs: "flex",
                 sm: "flex",
@@ -407,6 +402,7 @@ export default function Navbar() {
       >
         <LogIn closLog={closLog} />
       </Modal>
+      <SwipeableTemporaryDrawer collect={collect} setCollect={setCollect} />
     </>
   );
 }
