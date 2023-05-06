@@ -38,7 +38,6 @@ export default function Bazar() {
           <i style={{ fontSize: "30px" }} class="bx bx-chevron-right"></i>
         </Link>
       </Box>
-
       <Slides product={product} />
     </>
   );

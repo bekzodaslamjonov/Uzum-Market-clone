@@ -11,13 +11,13 @@ export default function Hayitlik() {
   let [hiddenBtn, setHiddenBtn] = useState("none");
   useEffect(() => {
     axios
-      .get(Api + "hayitlik/?_start=0&_limit=20")
+      .get(Api + "Skidki/?_start=0&_limit=20")
       .then((res) => setProduct(res.data));
   }, []);
 
   const showAll = () => {
     axios
-      .get(Api + "hayitlik/?_start=0&_limit=40")
+      .get(Api + "Skidki/?_start=0&_limit=40")
       .then((res) => setProduct(res.data));
     setShowBtn("none");
     setHiddenBtn("flex");
@@ -42,7 +42,7 @@ export default function Hayitlik() {
           }}
         >
           <Typography sx={{ fontSize: "28px", fontWeight: "700" }}>
-            Хаитлик
+          Cкидки
           </Typography>
           <i style={{ fontSize: "30px" }} class="bx bx-chevron-right"></i>
         </Link>

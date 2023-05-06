@@ -25,7 +25,7 @@ export default function App() {
       <Box sx={{ width: {
         xs:'95%', 
         sm:'95%',
-        md:'95%',
+        md:'100%',
         lg:'95%',
         xl:'80%'
       }, minHeight: "150vh" }}>

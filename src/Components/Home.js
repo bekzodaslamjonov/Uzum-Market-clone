@@ -1,10 +1,11 @@
 import React from "react";
 import Slider from "./Slider/Slider";
 import { Box, } from "@mui/material";
-import Hayitlik from "./Hayitlik";
+import Hayitlik from "./SkidkiM";
 import Rasrochka from "./Rasrochka";
 import Bazar from "./Bazar";
 import Novinki from "./Novinki";
+import BasicTabs from "./Tabs/BasicTabs";
 
 
 export default function Home() {
@@ -31,8 +32,12 @@ export default function Home() {
         <Bazar/>
         <Novinki/>
         </Box>
-        <Box>
-          
+        <Box width={'100%'} display={{ xs:'block',
+          sm:'block',
+          md:'block',
+          lg:'none',
+          xl:'none'}}>
+          <BasicTabs/>
         </Box>
       </Box>
     </>
