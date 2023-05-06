@@ -9,23 +9,28 @@ import you from "../../../Images/youtube-icon-logo-svgrepo-com.svg";
 import face from "../../../Images/facebook-icon-logo-svgrepo-com.svg";
 export default function Footer() {
   return (
-    <Box sx={{display:{ 
-      xs:'none',
-      sm:'none',
-      md:'none',
-      lg:'flex',
-      xl:'flex'
-    },flexDirection:'column'}}>
+    <Box
+      sx={{
+        display: {
+          xs: "none",
+          sm: "none",
+          md: "none",
+          lg: "flex",
+          xl: "flex",
+        },
+        flexDirection: "column",
+      }}
+    >
       <Box
         sx={{
           width: "100%",
           height: "300px",
           display: {
-            xs:'none',
-            sm:'none',
-            md:'none',
-            lg:'flex',
-            xl:'flex'
+            xs: "none",
+            sm: "none",
+            md: "none",
+            lg: "flex",
+            xl: "flex",
           },
           justifyContent: "space-around",
         }}
@@ -36,10 +41,10 @@ export default function Footer() {
             height: "100%",
             display: "flex",
             flexDirection: "column",
-            gap: "40px",
+            justifyContent: "center",
           }}
         >
-          <Box>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
             <Typography sx={{ fontSize: "14px", fontWeight: "700" }}>
               О нас
             </Typography>
@@ -109,17 +114,17 @@ export default function Footer() {
             height: "100%",
             display: "flex",
             flexDirection: "column",
-            gap: "40px",
+            justifyContent: "center",
           }}
         >
-         <Box>
-         <Typography sx={{ fontSize: "14px", fontWeight: "700" }}>
-            Пользователям
-          </Typography>
-          <Typography sx={{ fontSize: "12px" }}>Связаться с нами</Typography>
-          <Typography sx={{ fontSize: "12px" }}>Вопрос - Ответ</Typography>
-         </Box>
-         <Box
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+            <Typography sx={{ fontSize: "14px", fontWeight: "700" }}>
+              Пользователям
+            </Typography>
+            <Typography sx={{ fontSize: "12px" }}>Связаться с нами</Typography>
+            <Typography sx={{ fontSize: "12px" }}>Вопрос - Ответ</Typography>
+          </Box>
+          <Box
             sx={{
               width: "100%",
               height: "50%",
@@ -158,6 +163,7 @@ export default function Footer() {
             display: "flex",
             flexDirection: "column",
             gap: "10px",
+            justifyContent: "center",
           }}
         >
           <Typography sx={{ fontSize: "14px", fontWeight: "700" }}>
@@ -166,7 +172,9 @@ export default function Footer() {
           <Typography sx={{ fontSize: "12px" }}>Продавайте на Uzum</Typography>
           <Typography sx={{ fontSize: "12px" }}>Вход для продавцов</Typography>
         </Box>
-        <Box sx={{ width: "20%", height: "100%" }}>
+        <Box sx={{ width: "20%", height: "100%", display: "flex",
+            flexDirection: "column",
+            justifyContent:"end"}}>
           <Box
             sx={{
               width: "100%",
@@ -227,7 +235,7 @@ export default function Footer() {
           <Box
             sx={{
               width: "100%",
-              height: "50%",
+              height: "40%",
               display: {
                 xs: "none",
                 sm: "none",
