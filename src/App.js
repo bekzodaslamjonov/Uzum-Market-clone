@@ -11,6 +11,7 @@ import FooterSmall from "./Components/Common/Footer/FooterSmall";
 
 export default function App() {
   return (
+    
     <Box  
       sx={{
         width: "100%",

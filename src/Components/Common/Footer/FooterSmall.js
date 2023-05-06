@@ -1,14 +1,14 @@
-import { Box, Button, Typography } from "@mui/material";
-import React, { useState } from "react";
+import { Box, Typography } from "@mui/material";
+import React from "react";
 import Bottom from "../Bottom/Bottom";
-
+import CustomizedAccordions from "./CustomizedAccordions";
+import appl from "../../../Images/download-on-the-app-store-apple-logo-svgrepo-com.svg";
+import gogl from "../../../Images/google-play-download-android-app-logo-svgrepo-com.svg";
+import inst from "../../../Images/Instagram-Logo.wine.svg";
+import tg from "../../../Images/telegram-logo-svgrepo-com.svg";
+import you from "../../../Images/youtube-icon-logo-svgrepo-com.svg";
+import face from "../../../Images/facebook-icon-logo-svgrepo-com.svg";
 export default function FooterSmall() {
-  // let [hidden, setHidden] = useState("hidden");
-  let [show, setShow] = useState("none");
-
-  let showBtn = () => {
-    setShow("Flex");
-  };
   return (
     <Box
       sx={{
@@ -25,7 +25,7 @@ export default function FooterSmall() {
       <Box
         sx={{
           width: "100%",
-          height: "400px",
+          height: "240px",
           display: {
             xs: "flex",
             sm: "flex",
@@ -36,74 +36,54 @@ export default function FooterSmall() {
           justifyContent: "center",
         }}
       >
+        <CustomizedAccordions />
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          height: "400px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <Box
           sx={{
-            width: "100%",
-            height: "auto",
+            width: "40%",
+            height: "100%",
             display: "flex",
-            alignItems: "center",
+            justifyContent: "center",
             flexDirection: "column",
+            alignItems: "center",
           }}
         >
           <Box
-            sx={{ width: "100%", height: "auto", borderBottom: "1px solid " }}
+            sx={{
+              width: "100%",
+              height: "50%",
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
           >
-            <Button sx={{ width: "100%", height: "50px" }} onClick={showBtn}>
-              <Typography>О нас</Typography>
-            </Button>
-            <Box
-              sx={{
-                width: "100%",
-                height: "auto",
-                display: show,
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-              }}
-            >
-              <Typography>Пункты выдачи</Typography>
-              <Typography>Вакансии</Typography>
-            </Box>
+            <Typography>Скачать приложение</Typography>
+            <img style={{ width: "50%", height: "50%" }} src={appl} alt="" />
+            <img style={{ width: "50%", height: "50%" }} src={gogl} alt="" />
           </Box>
+          <Typography>Uzum в соцсетях</Typography>
           <Box
-            sx={{ width: "100%", height: "auto", borderBottom: "1px solid " }}
+            sx={{
+              width: "30%",
+              height: "50%",
+              display: "flex",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+            }}
           >
-            <Button sx={{ width: "100%", height: "50px" }} onClick={showBtn}>
-              <Typography> Пользователям</Typography>
-            </Button>
-            <Box
-              sx={{
-                width: "100%",
-                height: "auto",
-                display: show,
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-              }}
-            >
-              <Typography>Пункты выдачи</Typography>
-              <Typography>Вакансии</Typography>
-            </Box>
-          </Box>
-          <Box
-            sx={{ width: "100%", height: "auto", borderBottom: "1px solid " }}
-          >
-            <Button sx={{ width: "100%", height: "50px" }} onClick={showBtn}>
-              <Typography>  Для предпринимателей</Typography>
-            </Button>
-            <Box
-              sx={{
-                width: "100%",
-                height: "auto",
-                display: show,
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-              }}
-            >
-              <Typography>Пункты выдачи</Typography>
-              <Typography>Вакансии</Typography>
-            </Box>
+            <img style={{ width: "44px", height: "44px" }} src={inst} alt="#" />
+            <img style={{ width: "38px", height: "44px" }} src={tg} alt="#" />
+            <img style={{ width: "45px", height: "44px" }} src={you} alt="#" />
+            <img style={{ width: "40px", height: "44px" }} src={face} alt="#" />
           </Box>
         </Box>
       </Box>

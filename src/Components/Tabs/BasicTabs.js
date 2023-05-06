@@ -1,10 +1,10 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Skidki from './Skidki';
+import * as React from "react";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Skidki from "./Skidki";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -35,7 +35,7 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
@@ -47,22 +47,27 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{  borderColor: 'divider' }}>
-        <Tabs sx={{width:'100%'}} value={value} onChange={handleChange} aria-label="basic tabs example">
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{ borderColor: "divider" }}>
+        <Tabs
+          sx={{ width: "100%" }}
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
           <Tab label="скидки" {...a11yProps(0)} />
           <Tab label="популярное" {...a11yProps(1)} />
           <Tab label="новинки" {...a11yProps(2)} />
         </Tabs>
       </Box>
-      <TabPanel  value={value} index={0}>
-        <Skidki/>
+      <TabPanel value={value} index={0}>
+        <Skidki />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <Skidki />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <Skidki />
       </TabPanel>
     </Box>
   );
