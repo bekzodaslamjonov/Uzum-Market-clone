@@ -4,13 +4,16 @@ import logo from "../../../Images/image.svg";
 import { Link } from "react-router-dom";
 import logo2 from "../../../Images/logo2.svg";
 import LogIn from "../Authentication/LogIn";
-import SwipeableTemporaryDrawer from "./TopDrawer";
+import TopDrawer from "./TopDrawer";
 export default function Navbar() {
   let [collect, setCollect] = useState(false);
   let [clearB, setClearB] = useState("none");
   let [openL, setOpenL] = useState(false);
+  let [show,setShow]=useState(false)
+ 
   let collectBtn = () => {
     setCollect(!collect);
+    setShow(!show)
   };
   let inputChang = () => {
     setClearB("block");
@@ -304,6 +307,7 @@ export default function Navbar() {
               </Button>
             </Box>
           </Box>
+        <TopDrawer show={show} />
           {/* navigation links */}
           <Box
             sx={{
@@ -402,7 +406,7 @@ export default function Navbar() {
       >
         <LogIn closLog={closLog} />
       </Modal>
-      <SwipeableTemporaryDrawer collect={collect} setCollect={setCollect} />
+
     </>
   );
 }
