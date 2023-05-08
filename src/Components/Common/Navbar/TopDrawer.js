@@ -21,7 +21,7 @@ import knigi1 from "../../../Images/knigi.svg";
 import dacha1 from "../../../Images/dacha.svg";
 
 export default function TopDrawer({ show }) {
-  let [transform1] = useState("translateY(-190vh)");
+  let [transform1] = useState("translateY(-140vh)");
   let [transform] = useState("translateY(0vh)");
   let [electro, setElektro] = useState("none");
   let [technic, setTechnic] = useState("none");
@@ -43,7 +43,7 @@ export default function TopDrawer({ show }) {
   let [knigi, setKnigi] = useState("none");
   let [dacha, setDacha] = useState("none");
   const electroFunc = () => {
-    setElektro("block");
+    setElektro("flex");
     setTechnic("none");
     setodejda("none");
   };
@@ -278,7 +278,7 @@ export default function TopDrawer({ show }) {
       <Box
         sx={{
           width: "100%",
-          height: "150vh",
+          height: "110vh",
           position: "absolute",
           zIndex: "2",
           backgroundColor: "#fff",
@@ -441,177 +441,715 @@ export default function TopDrawer({ show }) {
               </ListItemButton>
             </List>
           </Box>
-          <Box sx={{ width: "950px", height: "100%" }}>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: electro,
-              }}
-            >
-              Электроника
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: technic,
-              }}
-            >
-              Бытовая техника
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: odejda,
-              }}
-            >
-              Одежда
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: obuv,
-              }}
-            >
-              Обувь
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: aksesuari,
-              }}
-            >
-              Аксессуары
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: krasota,
-              }}
-            >
-              Красота
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: zadarovie,
-              }}
-            >
-              Здоровье
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: tovar,
-              }}
-            >
-              Товары для дома
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: stroy,
-              }}
-            >
-              Строительство и ремонт
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: avto,
-              }}
-            >
-              Автотовары
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: detskiy,
-              }}
-            >
-              Детские товары
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: hobbi,
-              }}
-            >
-              Хобби и творчество
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: sport,
-              }}
-            >
-              Спорт и отдых
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: product,
-              }}
-            >
-              Продукты питания
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: bitt,
-              }}
-            >
-              Бытовая химия и личная гигиена
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: kanc,
-              }}
-            >
-              Канцтовары
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: zoo,
-              }}
-            >
-              Зоотовары
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: knigi,
-              }}
-            >
-              Книги
-            </Box>
-            <Box
-              sx={{
-                width: "950px",
-                height: "100%",
-                display: dacha,
-              }}
-            >
-              Дача, сад и огород
+          <Box
+            sx={{
+              width: "950px",
+              height: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Box sx={{ width: "90%", height: "95%" }}>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: electro,
+                  flexDirection: "column",
+                  gap: "10px",
+                }}
+              >
+                <Typography sx={{ fontSize: "17px" }}>Электроника</Typography>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "90%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "30%",
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "10px",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Смартфоны и телефоны
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Аксессуары и запчасти
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Смартфоны{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Проводные телефоны
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Кнопочные телефоны{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Sim-карты
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          DECT-телефоны
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Компьютерная техника
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Аксессуары для компьютеров
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Хранение данных{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Компьютерная периферия
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Комплектующие для компьютерной техники
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Компьютеры
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Программное обеспечение
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Часы и электронные будильники
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Электронные будильники
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Проекционные часы{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Аромабудильники и картриджи
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Радио-будильники{" "}
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Квадрокоптеры и аксессуары
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Аксессуары
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Квадрокоптеры{" "}
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Офисная техника
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Комплектующие для офисной техники
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Офисное оборудование{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Аксессуары и уход за офисной техникой{" "}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Box>
+                  <Box
+                    sx={{
+                      width: "30%",
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "10px",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Умные часы и фитнес браслеты
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Умные часы
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Ремешки{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Фитнес браслеты{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Умные гаджеты
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Защита для часов и фитнес браслетов{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Кабели и зарядные устройства
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Наушники и аудиотехника
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Наушники{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Аудиотехника{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Аксессуары для проигрывателей{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Периферия и аксессуары{" "}
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Умный дом и безопасность
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Видеонаблюдение
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Умный дом{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Безопасность дома
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Игровые приставки
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Игровые контроллеры
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Приставки{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Аксессуары и запчасти для игровых пристав{" "}
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>Игры </Typography>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Оптические приборы{" "}
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Микроскопы
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Box>
+                  <Box
+                    sx={{
+                      width: "30%",
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "10px",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Ноутбуки, планшеты и электронные книги
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Аксессуары
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Ноутбуки
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Планшеты
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Электронные книги
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Фото- и видеотехника
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Оборудование для фотографов
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Аксессуары для фото- и видеокамер
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Фото- и видеокамеры
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Телевизоры и видеотехника
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Телевизоры
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Оборудование для телевизоров
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Проекторы и аксессуары
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Аксессуары для просмотра
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Плееры и техника для проигрывания
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Навигаторы
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          GPS-трекеры и GPS-маяки
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Автомобильные навигаторы
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "17px" }}>
+                        Аксессуары для электроники
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "5px",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Кабели
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Адаптеры и переходники
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Внешние аккумуляторы
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          USB хабы
+                        </Typography>
+                        <Typography sx={{ fontSize: "13px" }}>
+                          Батарейки
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: technic,
+                }}
+              >
+                Бытовая техника
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: odejda,
+                }}
+              >
+                Одежда
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: obuv,
+                }}
+              >
+                Обувь
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: aksesuari,
+                }}
+              >
+                Аксессуары
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: krasota,
+                }}
+              >
+                Красота
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: zadarovie,
+                }}
+              >
+                Здоровье
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: tovar,
+                }}
+              >
+                Товары для дома
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: stroy,
+                }}
+              >
+                Строительство и ремонт
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: avto,
+                }}
+              >
+                Автотовары
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: detskiy,
+                }}
+              >
+                Детские товары
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: hobbi,
+                }}
+              >
+                Хобби и творчество
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: sport,
+                }}
+              >
+                Спорт и отдых
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: product,
+                }}
+              >
+                Продукты питания
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: bitt,
+                }}
+              >
+                Бытовая химия и личная гигиена
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: kanc,
+                }}
+              >
+                Канцтовары
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: zoo,
+                }}
+              >
+                Зоотовары
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: knigi,
+                }}
+              >
+                Книги
+              </Box>
+              <Box
+                sx={{
+                  width: "950px",
+                  height: "100%",
+                  display: dacha,
+                }}
+              >
+                Дача, сад и огород
+              </Box>
             </Box>
           </Box>
         </Box>
