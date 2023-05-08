@@ -1,5 +1,24 @@
-import { Box, List, ListItem, ListItemButton, Typography } from "@mui/material";
+import { Box, List, ListItemButton, Typography } from "@mui/material";
 import React, { useState } from "react";
+import electro1 from "../../../Images/electro.svg";
+import bitt1 from "../../../Images/bitt.svg";
+import odejda1 from "../../../Images/odejda.svg";
+import obuv1 from "../../../Images/obuv.svg";
+import aksses1 from "../../../Images/aksses.svg";
+import krasota1 from "../../../Images/krasota.svg";
+import zdarovie1 from "../../../Images/zdarovie.svg";
+import tovari1 from "../../../Images/tovari.svg";
+import stroy1 from "../../../Images/stroy.svg";
+import avto1 from "../../../Images/avto.svg";
+import detskoe1 from "../../../Images/detskoe.svg";
+import hobbi1 from "../../../Images/hobbi.svg";
+import sport1 from "../../../Images/sport.svg";
+import product1 from "../../../Images/product.svg";
+import ximiya1 from "../../../Images/ximiya.svg";
+import kanctovari1 from "../../../Images/kanctovari.svg";
+import zoo1 from "../../../Images/zoo.svg";
+import knigi1 from "../../../Images/knigi.svg";
+import dacha1 from "../../../Images/dacha.svg";
 
 export default function TopDrawer({ show }) {
   let [transform1] = useState("translateY(-190vh)");
@@ -262,14 +281,14 @@ export default function TopDrawer({ show }) {
           height: "150vh",
           position: "absolute",
           zIndex: "2",
-          backgroundColor: "#fafafa",
+          backgroundColor: "#fff",
           top: "100px",
           left: "0",
           transform: `${!show ? transform1 : transform}`,
           boxShadow: "1px 10px 17px -6px rgba(0,0,0,0.52)",
           display: "flex",
           justifyContent: "center",
-          overflow:'hidden'
+          overflow: "hidden",
         }}
       >
         <Box
@@ -280,103 +299,146 @@ export default function TopDrawer({ show }) {
             justifyContent: "center",
           }}
         >
-          <Box sx={{ width: "270px", height: "100%", backgroundColor: "aqua" }}>
+          <Box sx={{ width: "270px", height: "100%" }}>
             <List>
-              <ListItem>
-                <ListItemButton onMouseOver={() => electroFunc()}>
+              <ListItemButton onMouseOver={() => electroFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img
+                    style={{ width: 24, height: 24 }}
+                    src={electro1}
+                    alt=""
+                  />
                   <Typography>Электроника</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => TechnicFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => TechnicFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img style={{ width: 24, height: 24 }} src={bitt1} alt="" />
                   <Typography>Бытовая техника</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => odejdaFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => odejdaFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img style={{ width: 24, height: 24 }} src={odejda1} alt="" />
                   <Typography>Одежда</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => obuvFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => obuvFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img style={{ width: 24, height: 24 }} src={obuv1} alt="" />
                   <Typography>Обувь</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => aksesuariFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => aksesuariFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img style={{ width: 24, height: 24 }} src={aksses1} alt="" />
                   <Typography>Аксессуары</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => krasotaFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => krasotaFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img
+                    style={{ width: 24, height: 24 }}
+                    src={krasota1}
+                    alt=""
+                  />
                   <Typography>Красота</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => zadarovieFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => zadarovieFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img
+                    style={{ width: 24, height: 24 }}
+                    src={zdarovie1}
+                    alt=""
+                  />
                   <Typography>Здоровье</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => tovarFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => tovarFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img style={{ width: 24, height: 24 }} src={tovari1} alt="" />
                   <Typography>Товары для дома</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => stroyFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => stroyFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img style={{ width: 24, height: 24 }} src={stroy1} alt="" />
                   <Typography>Строительство и ремонт</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => avtoFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => avtoFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img style={{ width: 24, height: 24 }} src={avto1} alt="" />
                   <Typography>Автотовары</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => detskiyFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => detskiyFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img
+                    style={{ width: 24, height: 24 }}
+                    src={detskoe1}
+                    alt=""
+                  />
                   <Typography>Детские товары</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => hobbiFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => hobbiFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img style={{ width: 24, height: 24 }} src={hobbi1} alt="" />
                   <Typography>Хобби и творчество</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => sportFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => sportFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img style={{ width: 24, height: 24 }} src={sport1} alt="" />
                   <Typography>Спорт и отдых</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => productFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => productFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img
+                    style={{ width: 24, height: 24 }}
+                    src={product1}
+                    alt=""
+                  />
                   <Typography>Продукты питания</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => bittFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => bittFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img style={{ width: 24, height: 24 }} src={ximiya1} alt="" />
                   <Typography>Бытовая химия и личная гигиена</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => kancFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => kancFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img
+                    style={{ width: 24, height: 24 }}
+                    src={kanctovari1}
+                    alt=""
+                  />
                   <Typography>Канцтовары</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => zooFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => zooFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img style={{ width: 24, height: 24 }} src={zoo1} alt="" />
                   <Typography>Зоотовары</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => knigiFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => knigiFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img style={{ width: 24, height: 24 }} src={knigi1} alt="" />
                   <Typography>Книги</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem>
-                <ListItemButton onMouseOver={() => dachaFunc()}>
+                </Box>
+              </ListItemButton>
+              <ListItemButton onMouseOver={() => dachaFunc()}>
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <img style={{ width: 24, height: 24 }} src={dacha1} alt="" />
                   <Typography>Дача, сад и огород</Typography>
-                </ListItemButton>
-              </ListItem>
+                </Box>
+              </ListItemButton>
             </List>
           </Box>
           <Box sx={{ width: "950px", height: "100%" }}>
@@ -385,7 +447,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: electro,
-                backgroundColor: "red",
               }}
             >
               Электроника
@@ -395,7 +456,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: technic,
-                backgroundColor: "green",
               }}
             >
               Бытовая техника
@@ -405,7 +465,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: odejda,
-                backgroundColor: "green",
               }}
             >
               Одежда
@@ -415,7 +474,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: obuv,
-                backgroundColor: "green",
               }}
             >
               Обувь
@@ -425,7 +483,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: aksesuari,
-                backgroundColor: "green",
               }}
             >
               Аксессуары
@@ -435,7 +492,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: krasota,
-                backgroundColor: "green",
               }}
             >
               Красота
@@ -445,7 +501,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: zadarovie,
-                backgroundColor: "green",
               }}
             >
               Здоровье
@@ -455,7 +510,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: tovar,
-                backgroundColor: "green",
               }}
             >
               Товары для дома
@@ -465,7 +519,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: stroy,
-                backgroundColor: "green",
               }}
             >
               Строительство и ремонт
@@ -475,7 +528,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: avto,
-                backgroundColor: "green",
               }}
             >
               Автотовары
@@ -485,7 +537,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: detskiy,
-                backgroundColor: "green",
               }}
             >
               Детские товары
@@ -495,7 +546,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: hobbi,
-                backgroundColor: "green",
               }}
             >
               Хобби и творчество
@@ -505,7 +555,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: sport,
-                backgroundColor: "green",
               }}
             >
               Спорт и отдых
@@ -515,7 +564,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: product,
-                backgroundColor: "green",
               }}
             >
               Продукты питания
@@ -525,7 +573,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: bitt,
-                backgroundColor: "green",
               }}
             >
               Бытовая химия и личная гигиена
@@ -535,7 +582,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: kanc,
-                backgroundColor: "green",
               }}
             >
               Канцтовары
@@ -545,7 +591,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: zoo,
-                backgroundColor: "green",
               }}
             >
               Зоотовары
@@ -555,7 +600,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: knigi,
-                backgroundColor: "green",
               }}
             >
               Книги
@@ -565,7 +609,6 @@ export default function TopDrawer({ show }) {
                 width: "950px",
                 height: "100%",
                 display: dacha,
-                backgroundColor: "green",
               }}
             >
               Дача, сад и огород
