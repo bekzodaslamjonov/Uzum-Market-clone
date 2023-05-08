@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 import logo2 from "../../../Images/logo2.svg";
 import LogIn from "../Authentication/LogIn";
 import TopDrawer from "./TopDrawer";
+import LeftDrawer from "./LeftDrawer";
 export default function Navbar() {
   let [collect, setCollect] = useState(false);
   let [clearB, setClearB] = useState("none");
   let [openL, setOpenL] = useState(false);
   let [show,setShow]=useState(false)
- 
+  let [lDrawer,setLdrawer]=useState(false)
   let collectBtn = () => {
     setCollect(!collect);
     setShow(!show)
@@ -24,6 +25,9 @@ export default function Navbar() {
   const closLog = () => {
     setOpenL(!openL);
   };
+  const leftDrawer = ()=>{
+    setLdrawer(!lDrawer)
+  }
   return (
     <>
       <Box
@@ -98,6 +102,7 @@ export default function Navbar() {
                 }}
               >
                 <Button
+                  onClick={leftDrawer}
                   sx={{
                     display: {
                       xs: "block",
@@ -406,7 +411,7 @@ export default function Navbar() {
       >
         <LogIn closLog={closLog} />
       </Modal>
-
+      <LeftDrawer lDrawer={lDrawer} />        
     </>
   );
 }
