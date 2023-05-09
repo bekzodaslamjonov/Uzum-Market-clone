@@ -6,6 +6,7 @@ import logo2 from "../../../Images/logo2.svg";
 import LogIn from "../Authentication/LogIn";
 import TopDrawer from "./TopDrawer";
 import LeftDrawer from "./LeftDrawer";
+import Categories from "./Categories";
 export default function Navbar() {
   let [collect, setCollect] = useState(false);
   let [clearB, setClearB] = useState("none");
@@ -114,7 +115,7 @@ export default function Navbar() {
                   }}
                 >
                   <Typography sx={{ fontSize: "30px" }}>
-                    <i class="bx bx-menu"></i>
+                    <i className="bx bx-menu"></i>
                   </Typography>
                 </Button>
                 {
@@ -148,9 +149,9 @@ export default function Navbar() {
               }}
             >
               {!collect ? (
-                <i class="bx bx-collection"></i>
+                <i className="bx bx-collection"></i>
               ) : (
-                <i class="bx bx-x"></i>
+                <i className="bx bx-x"></i>
               )}
               <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
                 Каталог
@@ -194,7 +195,7 @@ export default function Navbar() {
                   display: clearB,
                 }}
               >
-                <i class="bx bx-x"></i>
+                <i className="bx bx-x"></i>
               </Button>
               <Button
                 sx={{
@@ -208,7 +209,7 @@ export default function Navbar() {
                   },
                 }}
               >
-                <i class="bx bx-search"></i>
+                <i className="bx bx-search"></i>
               </Button>
             </Box>
 
@@ -237,7 +238,7 @@ export default function Navbar() {
                   color: "#000",
                 }}
               >
-                <i class="bx bx-user"></i>
+                <i className="bx bx-user"></i>
                 <Typography
                   sx={{
                     fontSize: "14px",
@@ -265,7 +266,7 @@ export default function Navbar() {
                   color: "#000",
                 }}
               >
-                <i class="bx bx-heart"></i>
+                <i className="bx bx-heart"></i>
                 <Typography
                   sx={{
                     fontSize: "14px",
@@ -293,7 +294,7 @@ export default function Navbar() {
                   color: "#000",
                 }}
               >
-                <i class="bx bx-shopping-bag"></i>
+                <i className="bx bx-shopping-bag"></i>
                 <Typography
                   sx={{
                     fontSize: "14px",
@@ -312,7 +313,7 @@ export default function Navbar() {
               </Button>
             </Box>
           </Box>
-        <TopDrawer show={show} />
+        {/* <TopDrawer show={show} /> */}
           {/* navigation links */}
           <Box
             sx={{
@@ -386,7 +387,7 @@ export default function Navbar() {
                 },
               }}
             >
-              <i class="bx bx-search"></i>
+              <i className="bx bx-search"></i>
             </Box>
 
             <input
@@ -411,7 +412,9 @@ export default function Navbar() {
       >
         <LogIn closLog={closLog} />
       </Modal>
-      <LeftDrawer lDrawer={lDrawer} />        
+      <LeftDrawer lDrawer={lDrawer} />   
+      <Categories show={show}/>
+
     </>
   );
 }
