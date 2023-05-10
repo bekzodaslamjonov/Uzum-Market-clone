@@ -4,7 +4,6 @@ import logo from "../../../Images/image.svg";
 import { Link } from "react-router-dom";
 import logo2 from "../../../Images/logo2.svg";
 import LogIn from "../Authentication/LogIn";
-import TopDrawer from "./TopDrawer";
 import LeftDrawer from "./LeftDrawer";
 import Categories from "./Categories";
 export default function Navbar() {
@@ -313,7 +312,6 @@ export default function Navbar() {
               </Button>
             </Box>
           </Box>
-        {/* <TopDrawer show={show} /> */}
           {/* navigation links */}
           <Box
             sx={{

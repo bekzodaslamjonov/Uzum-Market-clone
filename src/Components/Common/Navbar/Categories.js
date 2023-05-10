@@ -8,7 +8,7 @@ export default function Categories({ show }) {
   var [categori, setCategori] = useState([]);
   var [categoriS, setCategoriS] = useState([]);
   var [filtered, setFiltered] = useState([]);
-  let [transform1] = useState("translateY(-140vh)");
+  let [transform1] = useState("translateY(-150vh)");
   let [transform] = useState("translateY(0vh)");
   useEffect(() => {
     axios.get(Api + "category").then((res) => setCategori(res.data));
@@ -140,9 +140,6 @@ export default function Categories({ show }) {
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
                               {item.small[1].name}
                             </Typography>
-                            <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[2].name}
-                            </Typography>
                           </Box>
                         </Box>
                         <Box
@@ -167,13 +164,10 @@ export default function Categories({ show }) {
                             }}
                           >
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[0].name}
-                            </Typography>
-                            <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[1].name}
-                            </Typography>
-                            <Typography variant="p" sx={{ fontSize: "14px" }}>
                               {item.small[2].name}
+                            </Typography>
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[3].name}
                             </Typography>
                           </Box>
                         </Box>
@@ -199,13 +193,10 @@ export default function Categories({ show }) {
                             }}
                           >
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[0].name}
+                              {item.small[4].name}
                             </Typography>
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[1].name}
-                            </Typography>
-                            <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[2].name}
+                              {item.small[5].name}
                             </Typography>
                           </Box>
                         </Box>
@@ -233,13 +224,10 @@ export default function Categories({ show }) {
                             }}
                           >
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[0].name}
+                              {item.small[6].name}
                             </Typography>
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[1].name}
-                            </Typography>
-                            <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[2].name}
+                              {item.small[7].name}
                             </Typography>
                           </Box>
                         </Box>
@@ -265,13 +253,10 @@ export default function Categories({ show }) {
                             }}
                           >
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[0].name}
+                              {item.small[8].name}
                             </Typography>
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[1].name}
-                            </Typography>
-                            <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[2].name}
+                              {item.small[9].name}
                             </Typography>
                           </Box>
                         </Box>
@@ -297,13 +282,10 @@ export default function Categories({ show }) {
                             }}
                           >
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[0].name}
+                              {item.small[10].name}
                             </Typography>
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[1].name}
-                            </Typography>
-                            <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[2].name}
+                              {item.small[11].name}
                             </Typography>
                           </Box>
                         </Box>
@@ -331,13 +313,10 @@ export default function Categories({ show }) {
                             }}
                           >
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[0].name}
+                              {item.small[12].name}
                             </Typography>
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[1].name}
-                            </Typography>
-                            <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[2].name}
+                              {item.small[13].name}
                             </Typography>
                           </Box>
                         </Box>
@@ -363,13 +342,10 @@ export default function Categories({ show }) {
                             }}
                           >
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[0].name}
+                              {item.small[14].name}
                             </Typography>
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[1].name}
-                            </Typography>
-                            <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[2].name}
+                              {item.small[15].name}
                             </Typography>
                           </Box>
                         </Box>
@@ -395,14 +371,12 @@ export default function Categories({ show }) {
                             }}
                           >
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[0].name}
+                              {item.small[16].name}
                             </Typography>
                             <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[1].name}
+                              {item.small[16].name}
                             </Typography>
-                            <Typography variant="p" sx={{ fontSize: "14px" }}>
-                              {item.small[2].name}
-                            </Typography>
+
                           </Box>
                         </Box>
                       </Box>
