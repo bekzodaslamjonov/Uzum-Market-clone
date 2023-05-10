@@ -97,21 +97,76 @@ export default function Categories({ show }) {
                       justifyContent: "center",
                       flexDirection: "column",
                       alignItems: "center",
-                      backgroundColor: "red",
 
                     }}
                   >
                     <Box sx={{width:'95%',height:'5%'}}>
-                    <Typography>{categori[0].name}</Typography>
+                    <Typography sx={{fontSize:'18px'}}>{categori[0].name}</Typography>
                     </Box>
                     <Box
                       sx={{
                         width: "95%",
                         height: "90%",
-                        backgroundColor: "aqua",
+                        display:'flex',justifyContent:'space-between'
                       }}
                     >
-                      <Typography>{item.name}</Typography>
+                      <Box sx={{width:'30%',height:"auto"}}>
+                        <Box sx={{width:'100%',height:'35%',display:'flex',flexDirection:'column',gap:'8px'}}>
+                          <Box>
+                        <Typography sx={{fontSize:'18px'}}>{item.name}</Typography>
+                          </Box>
+                          <Box sx={{display:'flex',flexDirection:'column',gap:'3px'}}>
+                            <Typography variant="p" sx={{fontSize:'14px'}}>
+                              {item.small[0].name}
+                            </Typography>
+                            <Typography variant="p" sx={{fontSize:'14px'}}>
+                            {item.small[1].name}
+                            </Typography>
+                            <Typography variant="p" sx={{fontSize:'14px'}}>
+                            {item.small[2].name}
+                            </Typography>
+                          </Box>
+                        </Box>
+                        
+                      </Box>
+                      <Box sx={{width:'30%',height:"auto"}}>
+                        <Box sx={{width:'100%',height:'35%',display:'flex',flexDirection:'column',gap:'8px'}}>
+                          <Box>
+                        <Typography sx={{fontSize:'18px'}}>{item.name}</Typography>
+                          </Box>
+                          <Box sx={{display:'flex',flexDirection:'column',gap:'3px'}}>
+                            <Typography variant="p" sx={{fontSize:'14px'}}>
+                              {item.small[0].name}
+                            </Typography>
+                            <Typography variant="p" sx={{fontSize:'14px'}}>
+                            {item.small[1].name}
+                            </Typography>
+                            <Typography variant="p" sx={{fontSize:'14px'}}>
+                            {item.small[2].name}
+                            </Typography>
+                          </Box>
+                        </Box>
+                        
+                      </Box>
+                      <Box sx={{width:'30%',height:"auto"}}>
+                        <Box sx={{width:'100%',height:'35%',display:'flex',flexDirection:'column',gap:'8px'}}>
+                          <Box>
+                        <Typography sx={{fontSize:'18px'}}>{item.name}</Typography>
+                          </Box>
+                          <Box sx={{display:'flex',flexDirection:'column',gap:'3px'}}>
+                            <Typography variant="p" sx={{fontSize:'14px'}}>
+                              {item.small[0].name}
+                            </Typography>
+                            <Typography variant="p" sx={{fontSize:'14px'}}>
+                            {item.small[1].name}
+                            </Typography>
+                            <Typography variant="p" sx={{fontSize:'14px'}}>
+                            {item.small[2].name}
+                            </Typography>
+                          </Box>
+                        </Box>
+                        
+                      </Box>
                     </Box>
                   </Box>
                 ))
