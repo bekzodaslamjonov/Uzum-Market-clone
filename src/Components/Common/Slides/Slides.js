@@ -58,7 +58,7 @@ export default function Slides({ product }) {
         >
           {product.length !== 0
             ? product.map((item, index) => (
-                <SwiperSlide>
+                <SwiperSlide key={index}>
                   <SmallCard
                     key={index}
                     img={item.img}

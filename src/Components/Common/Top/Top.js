@@ -49,7 +49,7 @@ export default function Top() {
             }}
           >
             <Typography>
-              <i class="bx bx-map"></i>
+              <i className="bx bx-map"></i>
             </Typography>
             <Typography>Город:</Typography>
             <Typography sx={{ textDecoration: "underline", fontWeight: "600" }}>

@@ -69,7 +69,7 @@ export default function SmallCard({
             cursor: "pointer",
           }}
         >
-          {!butt ? <i class="bx bx-heart"></i> : <i class="bx bxs-heart"></i>}
+          {!butt ? <i className="bx bx-heart"></i> : <i className="bx bxs-heart"></i>}
         </Typography>
 
         <Box
@@ -118,7 +118,7 @@ export default function SmallCard({
             fontSize: "11px",
           }}
         >
-          <i class="bx bx-star"></i>
+          <i className="bx bx-star"></i>
           <Typography sx={{ fontSize: "11px", color: "#000" }}>
             {star}({ocenka} оценок)
           </Typography>
@@ -175,9 +175,9 @@ export default function SmallCard({
             }}
           >
             {icon ? (
-              <i class="bx bx-shopping-bag"></i>
+              <i className="bx bx-shopping-bag"></i>
             ) : (
-              <i class="bx bx-cart-add"></i>
+              <i className="bx bx-cart-add"></i>
             )}
           </Typography>
           

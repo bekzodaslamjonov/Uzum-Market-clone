@@ -35,7 +35,7 @@ export default function Bazar() {
           <Typography sx={{ fontSize: "28px", fontWeight: "700" }}>
           Базар не выходя из дома
           </Typography>
-          <i style={{ fontSize: "30px" }} class="bx bx-chevron-right"></i>
+          <i style={{ fontSize: "30px" }} className="bx bx-chevron-right"></i>
         </Link>
       </Box>
       <Slides product={product} />

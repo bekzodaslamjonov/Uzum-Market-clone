@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Api } from "../../../Api/Api";
 import { Link } from "react-router-dom";
 
-export default function Categories({show}) {
+export default function Categories({ show }) {
   var [categori, setCategori] = useState([]);
   var [categoriS, setCategoriS] = useState([]);
   var [filtered, setFiltered] = useState([]);
@@ -34,7 +34,7 @@ export default function Categories({show}) {
         zIndex: "10",
         left: "0",
         top: "100px",
-        transform:`${!show ? transform1 : transform}`,
+        transform: `${!show ? transform1 : transform}`,
         backgroundColor: "#fff",
       }}
     >
@@ -51,12 +51,22 @@ export default function Categories({show}) {
             {categori.length !== 0
               ? categori.map((item, index) => (
                   <Link
+                  key={index}
                     to={item.link}
                     style={{ textDecoration: "none", color: "black" }}
                   >
                     <ListItemButton onMouseOver={() => mouseFunc(index)}>
-                      <Box sx={{display:'flex', alignItems:'center',gap:'10px'}}>
-                         <i style={{fontSize:'20px'}} className={item.icons}></i>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "10px",
+                        }}
+                      >
+                        <i
+                          style={{ fontSize: "20px" }}
+                          className={item.icons}
+                        ></i>
                         <Typography>{item.name}</Typography>
                       </Box>
                     </ListItemButton>
@@ -65,13 +75,44 @@ export default function Categories({show}) {
               : ""}
           </List>
         </Box>
-        <Box sx={{ width: "75%", height: "100%", }}>
+        <Box
+          sx={{
+            width: "75vw",
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           {filtered.length !== 0
             ? filtered
                 .filter((item) => item.id === filtered[0].id)
                 .map((item, index) => (
-                  <Box>
-                    <Typography>{item.name}</Typography>
+                  <Box
+                    key={index}
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      backgroundColor: "red",
+
+                    }}
+                  >
+                    <Box sx={{width:'95%',height:'5%'}}>
+                    <Typography>{categori[0].name}</Typography>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: "95%",
+                        height: "90%",
+                        backgroundColor: "aqua",
+                      }}
+                    >
+                      <Typography>{item.name}</Typography>
+                    </Box>
                   </Box>
                 ))
             : ""}

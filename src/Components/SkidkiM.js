@@ -44,7 +44,7 @@ export default function Hayitlik() {
           <Typography sx={{ fontSize: "28px", fontWeight: "700" }}>
           Cкидки
           </Typography>
-          <i style={{ fontSize: "30px" }} class="bx bx-chevron-right"></i>
+          <i style={{ fontSize: "30px" }} className="bx bx-chevron-right"></i>
         </Link>
       </Box>
       <Box
@@ -69,7 +69,7 @@ export default function Hayitlik() {
                 star={item.star}
                 icon={item.activeIcon}
                 descript={item.descript}
-                // buyBtn={() => buyBtn(index)}
+               
               />
             ))
           : ""}

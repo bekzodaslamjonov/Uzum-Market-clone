@@ -56,7 +56,7 @@ export default function Rasrochka() {
           <Typography sx={{ fontSize: "28px", fontWeight: "700" }}>
             Рассрочка без переплат
           </Typography>
-          <i style={{ fontSize: "30px" }} class="bx bx-chevron-right"></i>
+          <i style={{ fontSize: "30px" }} className="bx bx-chevron-right"></i>
         </Link>
       </Box>
       <Slides product={product} />

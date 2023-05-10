@@ -62,7 +62,7 @@ export default function Home() {
           }}
         >
           <Typography sx={{lineHeight:'20px', fontSize: "30px", color: "white" }}>
-            <i class="bx bx-chevron-up"></i>
+            <i className="bx bx-chevron-up"></i>
           </Typography>
         </Button>
         </Link>
