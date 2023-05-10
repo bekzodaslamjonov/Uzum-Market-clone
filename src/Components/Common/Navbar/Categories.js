@@ -51,7 +51,7 @@ export default function Categories({ show }) {
             {categori.length !== 0
               ? categori.map((item, index) => (
                   <Link
-                  key={index}
+                    key={index}
                     to={item.link}
                     style={{ textDecoration: "none", color: "black" }}
                   >
@@ -97,75 +97,314 @@ export default function Categories({ show }) {
                       justifyContent: "center",
                       flexDirection: "column",
                       alignItems: "center",
-
                     }}
                   >
-                    <Box sx={{width:'95%',height:'5%'}}>
-                    <Typography sx={{fontSize:'18px'}}>{categori[0].name}</Typography>
+                    <Box sx={{ width: "95%", height: "5%" }}>
+                      <Typography sx={{ fontSize: "18px" }}>
+                        {categori[0].name}
+                      </Typography>
                     </Box>
                     <Box
                       sx={{
                         width: "95%",
                         height: "90%",
-                        display:'flex',justifyContent:'space-between'
+                        display: "flex",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Box sx={{width:'30%',height:"auto"}}>
-                        <Box sx={{width:'100%',height:'35%',display:'flex',flexDirection:'column',gap:'8px'}}>
+                      <Box sx={{ width: "30%", height: "auto" }}>
+                        <Box
+                          sx={{
+                            width: "100%",
+                            height: "35%",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "8px",
+                          }}
+                        >
                           <Box>
-                        <Typography sx={{fontSize:'18px'}}>{item.name}</Typography>
+                            <Typography sx={{ fontSize: "18px" }}>
+                              {item.names[0].name}
+                            </Typography>
                           </Box>
-                          <Box sx={{display:'flex',flexDirection:'column',gap:'3px'}}>
-                            <Typography variant="p" sx={{fontSize:'14px'}}>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              flexDirection: "column",
+                              gap: "3px",
+                            }}
+                          >
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
                               {item.small[0].name}
                             </Typography>
-                            <Typography variant="p" sx={{fontSize:'14px'}}>
-                            {item.small[1].name}
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[1].name}
                             </Typography>
-                            <Typography variant="p" sx={{fontSize:'14px'}}>
-                            {item.small[2].name}
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[2].name}
                             </Typography>
                           </Box>
                         </Box>
-                        
+                        <Box
+                          sx={{
+                            width: "100%",
+                            height: "35%",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "8px",
+                          }}
+                        >
+                          <Box>
+                            <Typography sx={{ fontSize: "18px" }}>
+                              {item.names[1].name}
+                            </Typography>
+                          </Box>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              flexDirection: "column",
+                              gap: "3px",
+                            }}
+                          >
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[0].name}
+                            </Typography>
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[1].name}
+                            </Typography>
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[2].name}
+                            </Typography>
+                          </Box>
+                        </Box>
+                        <Box
+                          sx={{
+                            width: "100%",
+                            height: "35%",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "8px",
+                          }}
+                        >
+                          <Box>
+                            <Typography sx={{ fontSize: "18px" }}>
+                              {item.names[2].name}
+                            </Typography>
+                          </Box>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              flexDirection: "column",
+                              gap: "3px",
+                            }}
+                          >
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[0].name}
+                            </Typography>
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[1].name}
+                            </Typography>
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[2].name}
+                            </Typography>
+                          </Box>
+                        </Box>
                       </Box>
-                      <Box sx={{width:'30%',height:"auto"}}>
-                        <Box sx={{width:'100%',height:'35%',display:'flex',flexDirection:'column',gap:'8px'}}>
+                      <Box sx={{ width: "30%", height: "auto" }}>
+                        <Box
+                          sx={{
+                            width: "100%",
+                            height: "35%",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "8px",
+                          }}
+                        >
                           <Box>
-                        <Typography sx={{fontSize:'18px'}}>{item.name}</Typography>
+                            <Typography sx={{ fontSize: "18px" }}>
+                              {item.names[3].name}
+                            </Typography>
                           </Box>
-                          <Box sx={{display:'flex',flexDirection:'column',gap:'3px'}}>
-                            <Typography variant="p" sx={{fontSize:'14px'}}>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              flexDirection: "column",
+                              gap: "3px",
+                            }}
+                          >
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
                               {item.small[0].name}
                             </Typography>
-                            <Typography variant="p" sx={{fontSize:'14px'}}>
-                            {item.small[1].name}
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[1].name}
                             </Typography>
-                            <Typography variant="p" sx={{fontSize:'14px'}}>
-                            {item.small[2].name}
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[2].name}
                             </Typography>
                           </Box>
                         </Box>
-                        
+                        <Box
+                          sx={{
+                            width: "100%",
+                            height: "35%",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "8px",
+                          }}
+                        >
+                          <Box>
+                            <Typography sx={{ fontSize: "18px" }}>
+                              {item.names[4].name}
+                            </Typography>
+                          </Box>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              flexDirection: "column",
+                              gap: "3px",
+                            }}
+                          >
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[0].name}
+                            </Typography>
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[1].name}
+                            </Typography>
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[2].name}
+                            </Typography>
+                          </Box>
+                        </Box>
+                        <Box
+                          sx={{
+                            width: "100%",
+                            height: "35%",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "8px",
+                          }}
+                        >
+                          <Box>
+                            <Typography sx={{ fontSize: "18px" }}>
+                              {item.names[5].name}
+                            </Typography>
+                          </Box>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              flexDirection: "column",
+                              gap: "3px",
+                            }}
+                          >
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[0].name}
+                            </Typography>
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[1].name}
+                            </Typography>
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[2].name}
+                            </Typography>
+                          </Box>
+                        </Box>
                       </Box>
-                      <Box sx={{width:'30%',height:"auto"}}>
-                        <Box sx={{width:'100%',height:'35%',display:'flex',flexDirection:'column',gap:'8px'}}>
+                      <Box sx={{ width: "30%", height: "auto" }}>
+                        <Box
+                          sx={{
+                            width: "100%",
+                            height: "35%",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "8px",
+                          }}
+                        >
                           <Box>
-                        <Typography sx={{fontSize:'18px'}}>{item.name}</Typography>
+                            <Typography sx={{ fontSize: "18px" }}>
+                              {item.names[6].name}
+                            </Typography>
                           </Box>
-                          <Box sx={{display:'flex',flexDirection:'column',gap:'3px'}}>
-                            <Typography variant="p" sx={{fontSize:'14px'}}>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              flexDirection: "column",
+                              gap: "3px",
+                            }}
+                          >
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
                               {item.small[0].name}
                             </Typography>
-                            <Typography variant="p" sx={{fontSize:'14px'}}>
-                            {item.small[1].name}
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[1].name}
                             </Typography>
-                            <Typography variant="p" sx={{fontSize:'14px'}}>
-                            {item.small[2].name}
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[2].name}
                             </Typography>
                           </Box>
                         </Box>
-                        
+                        <Box
+                          sx={{
+                            width: "100%",
+                            height: "35%",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "8px",
+                          }}
+                        >
+                          <Box>
+                            <Typography sx={{ fontSize: "18px" }}>
+                              {item.names[7].name}
+                            </Typography>
+                          </Box>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              flexDirection: "column",
+                              gap: "3px",
+                            }}
+                          >
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[0].name}
+                            </Typography>
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[1].name}
+                            </Typography>
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[2].name}
+                            </Typography>
+                          </Box>
+                        </Box>
+                        <Box
+                          sx={{
+                            width: "100%",
+                            height: "35%",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "8px",
+                          }}
+                        >
+                          <Box>
+                            <Typography sx={{ fontSize: "18px" }}>
+                              {item.names[8].name}
+                            </Typography>
+                          </Box>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              flexDirection: "column",
+                              gap: "3px",
+                            }}
+                          >
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[0].name}
+                            </Typography>
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[1].name}
+                            </Typography>
+                            <Typography variant="p" sx={{ fontSize: "14px" }}>
+                              {item.small[2].name}
+                            </Typography>
+                          </Box>
+                        </Box>
                       </Box>
                     </Box>
                   </Box>
