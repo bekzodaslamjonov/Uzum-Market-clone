@@ -8,26 +8,25 @@ export default function Categories({ show }) {
   var [categori, setCategori] = useState([]);
   var [categoriS, setCategoriS] = useState([]);
   var [filtered, setFiltered] = useState([]);
-  var [category,setCategory]=useState([])
+  var [category, setCategory] = useState([]);
   let [transform1] = useState("translateY(-150vh)");
   let [transform] = useState("translateY(0vh)");
-  useEffect(() => {
-    axios.get(Api + "category").then((res) => setCategori(res.data));
-  }, []);
-  useEffect(() => {
-    axios.get(Api + "categoriesSmall").then((res) => setCategoriS(res.data));
-  }, []);
+  // useEffect(() => {
+  //   axios.get(Api + "category").then((res) => setCategori(res.data));
+  // }, []);
+  // useEffect(() => {
+  //   axios.get(Api + "categoriesSmall").then((res) => setCategoriS(res.data));
+  // }, []);
   var mouseFunc = (index) => {
     filtered = categoriS.filter(
       (item) => item.categoryId === categori[index].id
     );
     setFiltered(filtered);
-    category=filtered[0].theme
-    setCategory(category)
-
+    category = filtered[0].theme;
+    setCategory(category);
   };
-//  console.log(filtered[0].theme);
- 
+  //  console.log(filtered[0].theme);
+
   return (
     <Box
       sx={{
@@ -87,6 +86,7 @@ export default function Categories({ show }) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            flexDirection:'column'
           }}
         >
           {filtered.length !== 0
@@ -386,20 +386,28 @@ export default function Categories({ show }) {
                   //     </Box>
                   //   </Box>
                   // </Box>
-                   <Box>
-                   <Typography>{item.name}</Typography>
-                   {
-                      category !==0 ?
-                      category.map((item,index)=>(
-                        <Typography>
-                          {item.name}
-                        </Typography>
-                      )):""
-                   }
+                  <>
+                  <Typography>{item.name}</Typography>
+                  <Box
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    {category !== 0
+                      ? category.map((item, index) => (
+                        <Box sx={{width:'30%',height:'100px',backgroundColor:"aqua"}}>
+                          <Typography>{item.name}</Typography>
+                        </Box>
+                        ))
+                      : ""}
                   </Box>
+                  </>
                 ))
             : ""}
-           
         </Box>
       </Box>
     </Box>

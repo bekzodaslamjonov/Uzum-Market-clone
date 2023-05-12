@@ -7,12 +7,16 @@ import Card from "../Common/Card/Card";
 import Rasrochka from "../Rasrochka";
 
 export default function Skidki() {
-  const [product, setProduct] = useState([]);
+  // let [product, setProduct] = useState([]);
+  let product =[]
+  let [data,setData]=useState([])
   useEffect(() => {
     axios
-      .get(Api + "Skidki/?_start=0&_limit=6")
-      .then((res) => setProduct(res.data));
+      .get(Api + "product")
+      .then((res) => setData(res.data));
   }, []);
+    product=data.filter((item) => item.type === "skidki")
+
   return (
     <Box sx={{ width: "100%" }}>
       <Box

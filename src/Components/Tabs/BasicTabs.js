@@ -4,7 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Skidki from "./Skidki";
+import Skidki from "./SkifiTabs";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;

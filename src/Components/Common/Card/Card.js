@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 export default function Card({
   img,
-  kredit,
+  credit,
   skidka,
   price,
   star,
@@ -126,7 +126,7 @@ export default function Card({
             justifyContent: "center",
           }}
         >
-          <Typography sx={{ fontSize: "11px" }}>{kredit}</Typography>
+          <Typography sx={{ fontSize: "11px" }}>{credit}</Typography>
         </Box>
         <Box
           sx={{

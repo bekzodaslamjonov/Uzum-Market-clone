@@ -1,26 +1,29 @@
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Slides from "./Common/Slides/Slides";
 import axios from "axios";
 import { Api } from "../Api/Api";
-import Slides from "./Common/Slides/Slides";
 
 export default function Rasrochka() {
-  const [product, setProduct] = useState([]);
+  // let [product, setProduct] = useState([]);
+  let product =[]
+  let [data, setdata] = useState([]);
   useEffect(() => {
-    axios.get(Api + "rasrochka/?_start=0&_limit=10").then((res) => setProduct(res.data));
+    axios.get(Api + "product").then((res) => setdata(res.data));
   }, []);
+  product = data.filter((item) => item.type === "rasrochka");
   return (
     <>
       <Box
         sx={{
           width: "100%",
           height: {
-            xs:'30vh',
-            sm:"35vh",
-            md:'50vh',
-            lg:'50vh',
-            xl:'50vh'
+            xs: "30vh",
+            sm: "35vh",
+            md: "50vh",
+            lg: "50vh",
+            xl: "50vh",
           },
           borderRadius: "10px",
           overflow: "hidden",
@@ -60,7 +63,6 @@ export default function Rasrochka() {
         </Link>
       </Box>
       <Slides product={product} />
-      
     </>
   );
 }

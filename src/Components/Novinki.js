@@ -6,19 +6,21 @@ import Card from "./Common/Card/Card";
 import { Link } from "react-router-dom";
 
 export default function Novinki() {
-  const [product, setProduct] = useState([]);
+  let product =[]
+  let [data,setData]=useState([])
   let [showBtn, setShowBtn] = useState("flex");
   let [hiddenBtn, setHiddenBtn] = useState("none");
+  let [toggle, setToggle] = useState(true);
+  
   useEffect(() => {
     axios
-      .get(Api + "novinki/?_start=0&_limit=20")
-      .then((res) => setProduct(res.data));
+      .get(Api + "product")
+      .then((res) => setData(res.data));
   }, []);
+    product=data.filter((item) => item.type === "skidki")
 
   const showAll = () => {
-    axios
-      .get(Api + "novinki/?_start=0&_limit=40")
-      .then((res) => setProduct(res.data));
+    setToggle(!toggle)
     setShowBtn("none");
     setHiddenBtn("flex");
   };
@@ -57,22 +59,35 @@ export default function Novinki() {
           gap: "10px",
         }}
       >
-        {product.length !== 0
+       {!toggle
           ? product.map((item, index) => (
               <Card
                 key={index}
                 img={item.img}
-                kredit={item.kredit}
+                credit={item.credit}
                 skidka={item.skidka}
                 price={item.price}
                 ocenka={item.ocenka}
                 star={item.star}
                 icon={item.activeIcon}
                 descript={item.descript}
-                // buyBtn={() => buyBtn(index)}
               />
             ))
-          : ""}
+          : product
+              .splice(0, 20)
+              .map((item, index) => (
+                <Card
+                  key={index}
+                  img={item.img}
+                  credit={item.credit}
+                  skidka={item.skidka}
+                  price={item.price}
+                  ocenka={item.ocenka}
+                  star={item.star}
+                  icon={item.activeIcon}
+                  descript={item.descript}
+                />
+              ))}
       </Box>
       <Box
         sx={{

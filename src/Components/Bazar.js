@@ -7,12 +7,13 @@ import axios from "axios";
 import Slides from "./Common/Slides/Slides";
 
 export default function Bazar() {
-  
-  const [product, setProduc] = useState([]);
+  // let [product, setProduct] = useState([]);
+  let product =[]
+  let [data, setdata] = useState([]);
   useEffect(() => {
-    axios.get(Api + "bazar/?_start=0&_limit=10").then((res) => setProduc(res.data));
+    axios.get(Api + "product").then((res) => setdata(res.data));
   }, []);
-
+  product = data.filter((item) => item.type === "bazar");
   return (
     <>
       <Box
