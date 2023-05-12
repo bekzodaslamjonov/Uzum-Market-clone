@@ -109,17 +109,16 @@ export default function Categories({ show }) {
                       ? themeC.map((item, index) => (
                           <Box
                             sx={{
-                              width: "auto",
-                              height: "100px",
-                              backgroundColor: "aqua",
+                              width: "30%",
+                              height: "auto",
                             }}
                           >
-                            <Typography>{item.name}</Typography>
+                            <Typography sx={{fontSize:'15px'}}>{item.name}</Typography>
                             {
                               FilterCa.length !== 0
                              ? FilterCa.map((item,index)=>(
                                   <Box>
-                                    <Typography>
+                                    <Typography sx={{fontSize:'12px'}}>
                                       {item.name}
                                     </Typography>
                                   </Box>
