@@ -1,4 +1,4 @@
-import { Box, Button, Modal, Typography } from "@mui/material";
+import { Box, Button, List, ListItem, Modal, Typography } from "@mui/material";
 import React, { useState } from "react";
 import logo from "../../../Images/image.svg";
 import { Link } from "react-router-dom";
@@ -6,6 +6,7 @@ import logo2 from "../../../Images/logo2.svg";
 import LogIn from "../Authentication/LogIn";
 import LeftDrawer from "./LeftDrawer";
 import Categories from "./Categories";
+import './Nav.css' 
 export default function Navbar() {
   let [collect, setCollect] = useState(false);
   let [clearB, setClearB] = useState("none");
@@ -336,20 +337,54 @@ export default function Navbar() {
                 listStyle: "none",
                 display: "flex",
                 justifyContent: "space-around",
-                fontSize: "14px",
               }}
-            >
-              <li>Электроника</li>
-              <li>Бытовая техника</li>
-              <li>Одежда</li>
-              <li>Обувь</li>
-              <li>Аксессуары</li>
-              <li>Красота</li>
-              <li>Товары для дома</li>
-              <li>Строительство и ремонт</li>
-              <li>Автотовары</li>
-              <li>Детские товары</li>
+            > 
+            <Link style={{textDecoration:"none"}}>
+              <li className="hover">Электроника</li>
+            </Link>
+            <Link style={{textDecoration:"none"}}>
+              <li className="hover">Бытовая техника</li>
+            </Link>
+            <Link style={{textDecoration:"none"}}>
+              <li className="hover">Одежда</li>
+            </Link>
+            <Link style={{textDecoration:"none"}}>
+              <li className="hover">Обувь</li>
+            </Link>
+            <Link style={{textDecoration:"none"}}>
+              <li className="hover">Аксессуары</li>
+            </Link>
+            <Link style={{textDecoration:"none"}}>
+              <li className="hover">Красота</li>
+            </Link>
+            <Link style={{textDecoration:"none"}}>
+              <li className="hover">Товары для дома</li>
+            </Link>
+            <Link style={{textDecoration:"none"}}>
+              <li className="hover">Строительство и ремонт</li>
+            </Link>
+              <Link style={{textDecoration:"none"}}>
+              <li className="hover">Автотовары</li>
+              </Link >
+              <Link style={{textDecoration:"none"}}>
+              <li className="hover">Детские товары</li>
+              </Link>
             </ul>
+            {/* <List sx={{ width: "100%",
+                listStyle: "none",
+                display: "flex",
+                // justifyContent: "space-around",
+                fontSize: "14px",}}>
+              <ListItem sx={{width:'auto'}}>Электроника</ListItem>
+              <ListItem sx={{width:'auto'}}>Бытовая техника</ListItem>
+              <ListItem sx={{width:'auto'}}>Одежда</ListItem>
+              <ListItem sx={{width:'auto'}}>Обувь</ListItem>
+              <ListItem sx={{width:'auto'}}>Аксессуары</ListItem>
+              <ListItem sx={{width:'auto'}}>Товары для дома</ListItem>
+              <ListItem sx={{width:'auto'}}>Строительство и ремонт</ListItem>
+              <ListItem sx={{width:'auto'}}>Автотовары</ListItem>
+              <ListItem sx={{width:'auto'}}>Детские товары</ListItem>
+            </List> */}
             <Button
               onClick={collectBtn}
               sx={{ width: "auto", fontSize: "14px" }}

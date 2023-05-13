@@ -1,0 +1,21 @@
+.hover{
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0 10px 0;
+  color: #9d9d9d;
+  font-size: 14px;
+  font-weight: 600;
+}
+.hover::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    border-bottom: 1px solid black ;
+    bottom: 0;
+}
+.hover:hover:before{
+    width: 100%;
+    transition: all .5s linear;
+}
