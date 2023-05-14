@@ -34,7 +34,14 @@ export default function Categories({ show }) {
         zIndex: "10",
         left: "0",
         top: "100px",
-        transform: `${!show ? transform1 : transform}`,
+        transform:{
+          xs:"translateY(-230vh)",
+          sm:"translateY(-210vh)",
+          md:"translateY(-200vh)",
+          lg:"translateY(-150vh)",
+          xl: `${!show ? transform1 : transform}`,
+        },
+        // transform: `${!show ? transform1 : transform}`,
         backgroundColor: "#fff",
       }}
     >

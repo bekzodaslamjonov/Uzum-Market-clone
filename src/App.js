@@ -21,6 +21,7 @@ export default function App() {
         justifyContent: "center",
       }}
     >
+
       <Top />
       <Box
         sx={{
@@ -38,7 +39,7 @@ export default function App() {
         <>
           <Routes>
             <Route path={"/"} element={<Home />} />
-            <Route path={"category/:product"} element={<Product />} />
+            <Route path={"/:category"} element={<Product />} />
             <Route path={"*"} element={<NotFound />} />
           </Routes>
         </>

@@ -1,14 +1,11 @@
-import { Box, Drawer } from "@mui/material";
-import React from "react";
+import { Box } from '@mui/material'
+import React from 'react'
 
-export default function LeftDrawer({ lDrawer }) {
+export default function LeftDrawer() {
   return (
-    <>
-      <Drawer anchor="left" open={lDrawer}>
-        <Box>
-            hello
-        </Box>
-      </Drawer>
-    </>
-  );
+    <Box sx={{width:'100%',height:"100%"}}>
+      
+    </Box>
+  )
 }
+

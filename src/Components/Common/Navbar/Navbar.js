@@ -1,4 +1,4 @@
-import { Box, Button, Modal, Typography } from "@mui/material";
+import { Box, Button, Drawer, Modal, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import logo from "../../../Images/image.svg";
 import { Link } from "react-router-dom";
@@ -15,6 +15,7 @@ export default function Navbar() {
   let [openL, setOpenL] = useState(false);
   let [show, setShow] = useState(false);
   let [lDrawer, setLdrawer] = useState(false);
+  let [BDrawer, setBDrawer] = useState(false);
   var [categorys, setCategorys] = useState([]);
   // let navigate =useNavigate()
   useEffect(() => {
@@ -35,6 +36,9 @@ export default function Navbar() {
   };
   const leftDrawer = () => {
     setLdrawer(!lDrawer);
+  };
+  const bDrawer = () => {
+    setBDrawer(!BDrawer);
   };
   return (
     <>
@@ -348,7 +352,11 @@ export default function Navbar() {
             >
               {categorys.length !== 0
                 ? categorys.map((item, index) => (
-                    <Link key={index} to={'category/:products'} style={{ textDecoration: "none", color: "black" }} >
+                    <Link
+                      key={index}
+                      to={`/${categorys[index].compare}`}
+                      style={{ textDecoration: "none", color: "black" }}
+                    >
                       <li className="hover">{item.name}</li>
                     </Link>
                   ))
@@ -411,13 +419,43 @@ export default function Navbar() {
       <Modal
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
         open={openL}
-      > 
-      <Box>
-        <LogIn closLog={closLog} />
-      </Box>
+      >
+        <Box>
+          <LogIn closLog={closLog} setLdrawer={() => setLdrawer} />
+        </Box>
       </Modal>
-      <LeftDrawer lDrawer={lDrawer} />
       <Categories show={show} />
+      <Drawer anchor="left" open={lDrawer}>
+        <Box sx={{ width: "100vw", height: "100vh",backgroundColor:"#f4f5f5" }}>
+          <Box
+            sx={{
+              width: "100%",
+              height: "8%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <Button
+              sx={{ width: "50px", height: "50px",color:"#000",":hover":{
+                backgroundColor:"transparent"
+              } }}
+              onClick={() => setLdrawer(false)}
+            >
+              <Typography sx={{ fontSize: "25px" }}>
+                <i class="bx bx-x"></i>
+              </Typography>
+            </Button>
+            <Button sx={{color:"#000",":hover":{
+                backgroundColor:"transparent"
+              } }}  onClick={bDrawer}>
+              <Typography sx={{textDecoration:"underline",textTransform:"none"}} >Войти/Зарегистрироваться</Typography>
+            </Button>
+          </Box>
+          <LeftDrawer />
+        </Box>
+      </Drawer>
+      <Drawer anchor="bottom" open={BDrawer}></Drawer>
     </>
   );
 }
