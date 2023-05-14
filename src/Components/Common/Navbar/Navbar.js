@@ -1,7 +1,7 @@
 import { Box, Button, Modal, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import logo from "../../../Images/image.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo2 from "../../../Images/logo2.svg";
 import LogIn from "../Authentication/LogIn";
 import LeftDrawer from "./LeftDrawer";
