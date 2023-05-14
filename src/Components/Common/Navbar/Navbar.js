@@ -1,21 +1,28 @@
-import { Box, Button, List, ListItem, Modal, Typography } from "@mui/material";
-import React, { useState } from "react";
+import { Box, Button, Modal, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import logo from "../../../Images/image.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo2 from "../../../Images/logo2.svg";
 import LogIn from "../Authentication/LogIn";
 import LeftDrawer from "./LeftDrawer";
 import Categories from "./Categories";
-import './Nav.css' 
+import "./Nav.css";
+import axios from "axios";
+import { Api } from "../../../Api/Api";
 export default function Navbar() {
   let [collect, setCollect] = useState(false);
   let [clearB, setClearB] = useState("none");
   let [openL, setOpenL] = useState(false);
-  let [show,setShow]=useState(false)
-  let [lDrawer,setLdrawer]=useState(false)
+  let [show, setShow] = useState(false);
+  let [lDrawer, setLdrawer] = useState(false);
+  var [categorys, setCategorys] = useState([]);
+  // let navigate =useNavigate()
+  useEffect(() => {
+    axios.get(Api + "navbar").then((res) => setCategorys(res.data));
+  }, []);
   let collectBtn = () => {
     setCollect(!collect);
-    setShow(!show)
+    setShow(!show);
   };
   let inputChang = () => {
     setClearB("block");
@@ -26,9 +33,9 @@ export default function Navbar() {
   const closLog = () => {
     setOpenL(!openL);
   };
-  const leftDrawer = ()=>{
-    setLdrawer(!lDrawer)
-  }
+  const leftDrawer = () => {
+    setLdrawer(!lDrawer);
+  };
   return (
     <>
       <Box
@@ -336,55 +343,17 @@ export default function Navbar() {
                 width: "100%",
                 listStyle: "none",
                 display: "flex",
-                justifyContent: "space-around",
+                justifyContent: "space-between",
               }}
-            > 
-            <Link style={{textDecoration:"none"}}>
-              <li className="hover">Электроника</li>
-            </Link>
-            <Link style={{textDecoration:"none"}}>
-              <li className="hover">Бытовая техника</li>
-            </Link>
-            <Link style={{textDecoration:"none"}}>
-              <li className="hover">Одежда</li>
-            </Link>
-            <Link style={{textDecoration:"none"}}>
-              <li className="hover">Обувь</li>
-            </Link>
-            <Link style={{textDecoration:"none"}}>
-              <li className="hover">Аксессуары</li>
-            </Link>
-            <Link style={{textDecoration:"none"}}>
-              <li className="hover">Красота</li>
-            </Link>
-            <Link style={{textDecoration:"none"}}>
-              <li className="hover">Товары для дома</li>
-            </Link>
-            <Link style={{textDecoration:"none"}}>
-              <li className="hover">Строительство и ремонт</li>
-            </Link>
-              <Link style={{textDecoration:"none"}}>
-              <li className="hover">Автотовары</li>
-              </Link >
-              <Link style={{textDecoration:"none"}}>
-              <li className="hover">Детские товары</li>
-              </Link>
+            >
+              {categorys.length !== 0
+                ? categorys.map((item, index) => (
+                    <Link key={index} to={'category/:products'} style={{ textDecoration: "none", color: "black" }} >
+                      <li className="hover">{item.name}</li>
+                    </Link>
+                  ))
+                : ""}
             </ul>
-            {/* <List sx={{ width: "100%",
-                listStyle: "none",
-                display: "flex",
-                // justifyContent: "space-around",
-                fontSize: "14px",}}>
-              <ListItem sx={{width:'auto'}}>Электроника</ListItem>
-              <ListItem sx={{width:'auto'}}>Бытовая техника</ListItem>
-              <ListItem sx={{width:'auto'}}>Одежда</ListItem>
-              <ListItem sx={{width:'auto'}}>Обувь</ListItem>
-              <ListItem sx={{width:'auto'}}>Аксессуары</ListItem>
-              <ListItem sx={{width:'auto'}}>Товары для дома</ListItem>
-              <ListItem sx={{width:'auto'}}>Строительство и ремонт</ListItem>
-              <ListItem sx={{width:'auto'}}>Автотовары</ListItem>
-              <ListItem sx={{width:'auto'}}>Детские товары</ListItem>
-            </List> */}
             <Button
               onClick={collectBtn}
               sx={{ width: "auto", fontSize: "14px" }}
@@ -442,12 +411,13 @@ export default function Navbar() {
       <Modal
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
         open={openL}
-      >
+      > 
+      <Box>
         <LogIn closLog={closLog} />
+      </Box>
       </Modal>
-      <LeftDrawer lDrawer={lDrawer} />   
-      <Categories show={show}/>
-
+      <LeftDrawer lDrawer={lDrawer} />
+      <Categories show={show} />
     </>
   );
 }

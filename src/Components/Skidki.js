@@ -128,7 +128,7 @@ export default function Skidki() {
               ":hover": { bgcolor: "rgba(118, 121, 127, 0.20)" },
             }}
           >
-            <Typography
+            <Typography 
               sx={{ fontSize: "16px", fontWeight: 600, color: "#000" }}
             >
               Посмотреть всю подборку

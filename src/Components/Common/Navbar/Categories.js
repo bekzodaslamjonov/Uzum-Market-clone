@@ -8,6 +8,7 @@ export default function Categories({ show }) {
   var [category, setCategory] = useState([]);
   var [filtered, setFiltered] = useState([]);
   var [theme, settheme] = useState([]);
+  var [theme2,setTheme2]=useState([])
   let [transform1] = useState("translateY(-150vh)");
   let [transform] = useState("translateY(0vh)");
   useEffect(() => {
@@ -19,8 +20,9 @@ export default function Categories({ show }) {
   var mouseFunc = (index) => {
     filtered = category.filter((item) => item.id === category[index].compare);
     setFiltered(filtered);
+    theme2=theme.filter((item)=>item.compare === filtered[0].compare)
+    setTheme2(theme2)
   };
-  
   return (
     <Box
       sx={{
@@ -50,7 +52,7 @@ export default function Categories({ show }) {
               ? category.map((item, index) => (
                   <Link
                     key={index}
-                    to={item.link}
+                    to={"product"}
                     style={{ textDecoration: "none", color: "black" }}
                   >
                     <ListItemButton onMouseOver={() => mouseFunc(index)}>
@@ -99,25 +101,22 @@ export default function Categories({ show }) {
                       flexWrap: "wrap",
                     }}
                   >
-                    {theme.filter((item)=>item.compare === filtered[0].compare)
-                      .map((item, index) => (
-                          <Box key={index}
+                    { 
+                      theme2.map((item, index) => (
+                          <Box 
                             sx={{
                               width: "30%",
                               height: "auto",
                             }}
                           >
-                            <Typography sx={{fontSize:'15px'}}>{item.name}</Typography>
-                            {/* {
-                              ex.length !== 0
-                             ? ex.map((item,index)=>(
-                                  <Box key={item.id}>
-                                    <Typography sx={{fontSize:'12px'}}>
-                                      {item.name}
-                                    </Typography>
-                                  </Box>
-                              )):""
-                            } */}
+                            <Typography key={index} sx={{fontSize:'15px'}}>{item.name}</Typography>
+                            {
+                              theme2[index].other.map((item,index)=>(
+                                <Typography key={index}>
+                                  {item.name}
+                                </Typography>
+                              ))
+                            }
                           </Box>
                         ))}
                     

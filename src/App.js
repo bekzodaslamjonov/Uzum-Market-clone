@@ -7,15 +7,11 @@ import Top from "./Components/Common/Top/Top";
 import NotFound from "./Components/Common/NotFound";
 import Footer from "./Components/Common/Footer/Footer";
 import FooterSmall from "./Components/Common/Footer/FooterSmall";
-
+import { Product } from "./Components/Product";
 
 export default function App() {
-
-
-  
   return (
-    
-    <Box  
+    <Box
       sx={{
         width: "100%",
         Height: "auto",
@@ -26,22 +22,28 @@ export default function App() {
       }}
     >
       <Top />
-      <Box sx={{ width: {
-        xs:'95%', 
-        sm:'95%',
-        md:'100%',
-        lg:'95%',
-        xl:'80%'
-      }, minHeight: "150vh" }}>
+      <Box
+        sx={{
+          width: {
+            xs: "95%",
+            sm: "95%",
+            md: "100%",
+            lg: "95%",
+            xl: "80%",
+          },
+          minHeight: "150vh",
+        }}
+      >
         <Navbar />
         <>
-        <Routes>
-          <Route path={"/"} element={<Home />} />
-          <Route path={"*"} element={<NotFound />} />
-        </Routes>
+          <Routes>
+            <Route path={"/"} element={<Home />} />
+            <Route path={"category/:product"} element={<Product />} />
+            <Route path={"*"} element={<NotFound />} />
+          </Routes>
         </>
-        <FooterSmall/>
-        <Footer/>
+        <FooterSmall />
+        <Footer />
       </Box>
     </Box>
   );
