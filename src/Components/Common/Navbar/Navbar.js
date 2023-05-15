@@ -125,7 +125,7 @@ export default function Navbar() {
                     },
                   }}
                 >
-                  <Typography sx={{ fontSize: "30px" }}>
+                  <Typography sx={{ fontSize: "30px", color: "black" }}>
                     <i className="bx bx-menu"></i>
                   </Typography>
                 </Button>
@@ -426,7 +426,16 @@ export default function Navbar() {
       </Modal>
       <Categories show={show} />
       <Drawer anchor="left" open={lDrawer}>
-        <Box sx={{ width: "100vw", height: "100vh",backgroundColor:"#f4f5f5" }}>
+        <Box
+          sx={{
+            width: "100vw",
+            height: "100vh",
+            backgroundColor: "#f4f5f5",
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px",
+          }}
+        >
           <Box
             sx={{
               width: "100%",
@@ -434,22 +443,38 @@ export default function Navbar() {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
+              backgroundColor: "#fff",
             }}
           >
             <Button
-              sx={{ width: "50px", height: "50px",color:"#000",":hover":{
-                backgroundColor:"transparent"
-              } }}
+              sx={{
+                width: "50px",
+                height: "50px",
+                color: "#000",
+                ":hover": {
+                  backgroundColor: "transparent",
+                },
+              }}
               onClick={() => setLdrawer(false)}
             >
               <Typography sx={{ fontSize: "25px" }}>
                 <i class="bx bx-x"></i>
               </Typography>
             </Button>
-            <Button sx={{color:"#000",":hover":{
-                backgroundColor:"transparent"
-              } }}  onClick={bDrawer}>
-              <Typography sx={{textDecoration:"underline",textTransform:"none"}} >Войти/Зарегистрироваться</Typography>
+            <Button
+              sx={{
+                color: "#000",
+                ":hover": {
+                  backgroundColor: "transparent",
+                },
+              }}
+              onClick={bDrawer}
+            >
+              <Typography
+                sx={{ textDecoration: "underline", textTransform: "none" }}
+              >
+                Войти/Зарегистрироваться
+              </Typography>
             </Button>
           </Box>
           <LeftDrawer />
