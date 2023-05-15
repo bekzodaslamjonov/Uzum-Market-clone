@@ -1,9 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Slides from "./Common/Slides/Slides";
+import Slides from "../Common/Slides/Slides";
 import axios from "axios";
-import { Api } from "../Api/Api";
+import { Api } from "../../Api/Api";
 
 export default function Rasrochka() {
   // let [product, setProduct] = useState([]);

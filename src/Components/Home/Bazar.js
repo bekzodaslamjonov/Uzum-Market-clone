@@ -2,9 +2,9 @@ import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { Api } from "../Api/Api";
+import { Api } from "../../Api/Api";
 import axios from "axios";
-import Slides from "./Common/Slides/Slides";
+import Slides from "../Common/Slides/Slides";
 
 export default function Bazar() {
   // let [product, setProduct] = useState([]);

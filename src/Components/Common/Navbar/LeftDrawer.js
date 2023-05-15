@@ -5,7 +5,6 @@ import {
   AccordionSummary,
   Box,
   Button,
-  Divider,
   Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
@@ -101,13 +100,13 @@ export default function LeftDrawer() {
         <Box
           sx={{
             width: "98%",
-            height: "320",
+            height: "320px",
           }}
         >
           <Box
             sx={{
               width: "100%",
-              height: "50%",
+              height: "55%",
               borderBottom: "1px solid",
               display: "flex",
               alignItems: "start",
@@ -134,6 +133,9 @@ export default function LeftDrawer() {
                   </Button>
                 ))
               : ""}
+          </Box>
+          <Box >
+
           </Box>
         </Box>
       </Box>

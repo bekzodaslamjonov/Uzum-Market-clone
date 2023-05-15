@@ -1,8 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { Api } from "../Api/Api";
+import { Api } from "../../Api/Api";
 import axios from "axios";
-import Card from "./Common/Card/Card";
+import Card from "../Common/Card/Card";
 import { Link } from "react-router-dom";
 
 export default function Novinki() {

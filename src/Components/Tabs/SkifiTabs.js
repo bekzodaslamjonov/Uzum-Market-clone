@@ -1,10 +1,10 @@
 import { Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import Bazar from "../Bazar";
+import Bazar from "../Home/Bazar";
 import axios from "axios";
 import { Api } from "../../Api/Api";
 import Card from "../Common/Card/Card";
-import Rasrochka from "../Rasrochka";
+import Rasrochka from "../Home/Rasrochka";
 
 export default function Skidki() {
   // let [product, setProduct] = useState([]);

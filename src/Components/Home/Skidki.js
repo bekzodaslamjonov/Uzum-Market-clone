@@ -1,10 +1,10 @@
 import { Box, Button, Typography } from "@mui/material";
 import React, {  useEffect, useState } from "react";
 
-import Card from "./Common/Card/Card";
+import Card from "../Common/Card/Card";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { Api } from "../Api/Api";
+import { Api } from "../../Api/Api";
 
 export default function Skidki() {
   // let [product,setProduct]= useState([]);

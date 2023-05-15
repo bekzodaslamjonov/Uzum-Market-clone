@@ -1,10 +1,10 @@
 import React from "react";
-import Slider from "./Slider/Slider";
+import Slider from "../Slider/Slider";
 import { Box, Button, Link, Typography } from "@mui/material";
 import Rasrochka from "./Rasrochka";
 import Bazar from "./Bazar";
 import Novinki from "./Novinki";
-import BasicTabs from "./Tabs/BasicTabs";
+import BasicTabs from "../Tabs/BasicTabs";
 import Skidki from "./Skidki";
 
 export default function Home() {

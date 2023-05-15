@@ -21,11 +21,11 @@ export default function Card({
     <Box
       sx={{
         width: {
-          xs: "180px",
-          sm: "250px",
-          md: "279.68px",
-          lg: "273px",
-          xl: "232px",
+          xs: "180px", //400
+          sm: "250px", //600
+          md: "279.68px",//900
+          lg: "273px", //1200
+          xl: "232px", //1500
         },
         height: {
           xs: "450.66px",
