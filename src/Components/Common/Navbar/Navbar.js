@@ -458,7 +458,7 @@ export default function Navbar() {
               onClick={() => setLdrawer(false)}
             >
               <Typography sx={{ fontSize: "25px" }}>
-                <i class="bx bx-x"></i>
+                <i className="bx bx-x"></i>
               </Typography>
             </Button>
             <Button
