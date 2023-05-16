@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import InputMask from "react-input-mask";
 
 export default function LogIn({ closLog }) {
+
+
+  
   return (
     <Box
       sx={{
@@ -54,19 +57,11 @@ export default function LogIn({ closLog }) {
             gap: "20px",
           }}
         >
-          <Typography sx={{ fontSize: "20px" }}>Регистрация</Typography>
-          <TextField
-            id="outlined-basic"
-            label="Электронная почта"
-            variant="outlined"
-            type="email"
-            sx={{ width: "100%" }}
-          ></TextField>
+          <Typography sx={{ fontSize: "24px",fontWeight:500 }}> Введите номер телефона</Typography>
+          <Typography sx={{ fontSize: "16px" }}>Отправим смс с кодом подтверждения</Typography>
           <InputMask
             mask="+999 (99) 999-99-99"
             maskChar=" "
-            // value={props.value}
-            // onChange={props.onChange}
           >
             {() => (
               <TextField
@@ -84,14 +79,11 @@ export default function LogIn({ closLog }) {
               ":hover": { backgroundColor: "#7000ff" },
             }}
           >
-            <Typography sx={{ color: "white" }}>Зарегистрироваться</Typography>
+            <Typography sx={{ color: "white" }}> Получить код</Typography>
           </Button>
-          <Typography sx={{ fontSize: "14px" }}>
-            Eсть аккаунт ?{" "}
-            <Link style={{ textDecoration: "none", color: "blue" }}>
-              Подключится
-            </Link>
-          </Typography>
+          <Link style={{ textDecoration: "none", }}>
+            <Typography sx={{ fontSize: "14px" }}>Войти по паролю</Typography>
+          </Link>
         </Box>
         <Box sx={{ textAlign: "center" }}>
           <Typography>
