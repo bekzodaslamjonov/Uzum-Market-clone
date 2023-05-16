@@ -87,13 +87,25 @@ export default function LeftDrawer() {
       ],
     },
   ];
+  var [theme, settheme] = useState([]);
   var [catalogy, setCatalogy] = useState([]);
+  var [expanded, setExpanded] = useState([]);
+  var [filtered, setFiltered] = useState([]);
   useEffect(() => {
     axios.get(Api + "category").then((res) => setCatalogy(res.data));
   }, []);
-
+  useEffect(() => {
+    axios.get(Api + "themes").then((res) => settheme(res.data));
+  }, []);
+  var handleChange = (index) => {
+    filtered = catalogy.filter((item) => item.id === catalogy[index].compare);
+    setFiltered(filtered);
+    expanded = theme.filter((item) => item.compare === filtered[0].compare);
+    setExpanded(expanded);
+  };
   return (
     <>
+      {/* //kategori */}
       <Box sx={{ width: "100%", height: "auto", backgroundColor: "#f4f5f5" }}>
         <Accordion>
           <AccordionSummary
@@ -116,7 +128,7 @@ export default function LeftDrawer() {
           <AccordionDetails>
             {catalogy.length !== 0
               ? catalogy.map((item, index) => (
-                  <Accordion key={index}>
+                  <Accordion onChange={() => handleChange(index)}>
                     <AccordionSummary
                       id={"panel-header"}
                       aria-controls="panel1-content"
@@ -133,7 +145,46 @@ export default function LeftDrawer() {
                         <Typography>{item.name}</Typography>
                       </Box>
                     </AccordionSummary>
-                    <AccordionDetails></AccordionDetails>
+                    <AccordionDetails>
+                      {expanded.length !== 0
+                        ? expanded.map((item, index) => (
+                            <Accordion key={index}>
+                              <AccordionSummary
+                                id={"panel-header"}
+                                aria-controls="panel1-content"
+                                expandIcon={<ExpandMore />}
+                              >
+                                <Typography>{item.name}</Typography>
+                              </AccordionSummary>
+                              <AccordionDetails>
+                                {expanded[index].other.map((item, index) => (
+                                  <Link
+                                    to={"product"}
+                                    style={{
+                                      textDecoration: "none",
+                                      color: "transparent",
+                                    }}
+                                  >
+                                    <Typography
+                                      key={index}
+                                      sx={{
+                                        fontSize: "12px",
+                                        padding: "2px 0 2px 0",
+                                        color: "#000",
+                                        ":hover": {
+                                          color: "blue",
+                                        },
+                                      }}
+                                    >
+                                      {item.name}
+                                    </Typography>
+                                  </Link>
+                                ))}
+                              </AccordionDetails>
+                            </Accordion>
+                          ))
+                        : ""}
+                    </AccordionDetails>
                   </Accordion>
                 ))
               : ""}
@@ -251,17 +302,16 @@ export default function LeftDrawer() {
                       <Typography>{item.name}</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                      <Box sx={{display:'flex',flexDirection:"column"}}>
-
-                      {accord[index].small.length !== 0
-                        ? accord[index].small.map((item, index) => (
-                            <Link key={index} to={item.link}>
-                              <Button>
-                                <Typography>{item.name}</Typography>
-                              </Button>
-                            </Link>
-                          ))
-                        : ""}
+                      <Box sx={{ display: "flex", flexDirection: "column" }}>
+                        {accord[index].small.length !== 0
+                          ? accord[index].small.map((item, index) => (
+                              <Link key={index} to={item.link}>
+                                <Button>
+                                  <Typography>{item.name}</Typography>
+                                </Button>
+                              </Link>
+                            ))
+                          : ""}
                       </Box>
                     </AccordionDetails>
                   </Accordion>
