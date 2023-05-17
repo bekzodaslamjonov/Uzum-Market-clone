@@ -5,6 +5,9 @@ import Card from "../Common/Card/Card";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { Api } from "../../Api/Api";
+import { useDispatch, useSelector } from "react-redux";
+import { products } from "../../Api/ApiSlice/productSlice";
+import { getProduct } from "../../Api/ApiSlice/getProduct";
 
 export default function Skidki() {
   // let [product,setProduct]= useState([]);
@@ -19,7 +22,17 @@ export default function Skidki() {
       .get(Api + "product")
       .then((res) => setData(res.data));
   }, []);
-    product=data.filter((item) => item.type === "skidki")
+  
+  // const dispatch = useDispatch();
+  // var product = useSelector((state) => state.product.data);
+
+  // useEffect(() => {
+  //   dispatch(getProduct());
+  // }, [dispatch]);
+
+
+
+    product = data.filter((item) => item.type === "skidki")
 
   const showAll = () => {
     setShowBtn("none");

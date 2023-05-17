@@ -266,6 +266,7 @@ export default function Navbar() {
                   Войти
                 </Typography>
               </Button>
+              <Link to={"/favorite"}>
               <Button
                 sx={{
                   width: "auto",
@@ -294,6 +295,7 @@ export default function Navbar() {
                   Избранное
                 </Typography>
               </Button>
+              </Link>
               <Button
                 sx={{
                   width: "auto",

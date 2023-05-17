@@ -1,5 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { actions } from "../../../Api/Favorite/Favorite.slice";
 
 export default function Card({
   img,
@@ -12,18 +14,24 @@ export default function Card({
   icon,
   descript,
 }) {
+  const dispatch = useDispatch();
+  const func = ()=>{
+    dispatch(actions.addToFavorites())
+  }
   const [butt, setbutt] = useState(false);
-
+  // const { favorites } = useSelector((state) => state);
   const but = () => {
     setbutt(!butt);
+    // func()
   };
+  // console.log(favorites);
   return (
     <Box
       sx={{
         width: {
           xs: "180px", //400
           sm: "250px", //600
-          md: "279.68px",//900
+          md: "279.68px", //900
           lg: "273px", //1200
           xl: "232px", //1500
         },
@@ -58,6 +66,7 @@ export default function Card({
           position: "relative",
         }}
       >
+        {/* dispatch(actions.addToFavorites()) */}
         <Typography
           onClick={but}
           sx={{
@@ -69,7 +78,11 @@ export default function Card({
             cursor: "pointer",
           }}
         >
-          {!butt ? <i className="bx bx-heart"></i> : <i className="bx bxs-heart"></i>}
+          {!butt ? (
+            <i className="bx bx-heart"></i>
+          ) : (
+            <i className="bx bxs-heart"></i>
+          )}
         </Typography>
 
         <Box
