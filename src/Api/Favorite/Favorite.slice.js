@@ -19,6 +19,5 @@ export const favoriteSlice = createSlice({
     },
   },
 });
-// state.state.filter((r) => r.id !== recipe.id)
-// addToFavorites()
+
 export const {actions,reducer} =favoriteSlice

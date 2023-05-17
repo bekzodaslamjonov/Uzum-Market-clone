@@ -1,39 +1,30 @@
 import { Box, Button, Typography } from "@mui/material";
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Card from "../Common/Card/Card";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import { Api } from "../../Api/Api";
 import { useDispatch, useSelector } from "react-redux";
-import { products } from "../../Api/ApiSlice/productSlice";
-import { getProduct } from "../../Api/ApiSlice/getProduct";
+import { getProduct } from "../../Api/ApiSlice/productSlice";
 
 export default function Skidki() {
   // let [product,setProduct]= useState([]);
-  let product =[]
-  let [data,setData]=useState([])
+  // let product = [];
+  let data1 = [];
   let [showBtn, setShowBtn] = useState("flex");
   let [hiddenBtn, setHiddenBtn] = useState("none");
   let [toggle, setToggle] = useState(true);
-  
-  useEffect(() => {
-    axios
-      .get(Api + "product")
-      .then((res) => setData(res.data));
-  }, []);
-  
-  // const dispatch = useDispatch();
-  // var product = useSelector((state) => state.product.data);
 
   // useEffect(() => {
-  //   dispatch(getProduct());
-  // }, [dispatch]);
+  //   axios.get(Api + "product").then((res) => setData(res.data));
+  // }, []);
 
+  var product1 = useSelector((state)=>state.product.data);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProduct());
+  }, [dispatch]);
 
-
-    product = data.filter((item) => item.type === "skidki")
-
+  data1 = product1.filter((product)=>product.type ==="skidki")
   const showAll = () => {
     setShowBtn("none");
     setHiddenBtn("flex");
@@ -75,7 +66,7 @@ export default function Skidki() {
         }}
       >
         {!toggle
-          ? product.map((item, index) => (
+          ? data1.map((item, index) => (
               <Card
                 key={index}
                 img={item.img}
@@ -88,7 +79,7 @@ export default function Skidki() {
                 descript={item.descript}
               />
             ))
-          : product
+          : data1
               .splice(0, 20)
               .map((item, index) => (
                 <Card
@@ -141,7 +132,7 @@ export default function Skidki() {
               ":hover": { bgcolor: "rgba(118, 121, 127, 0.20)" },
             }}
           >
-            <Typography 
+            <Typography
               sx={{ fontSize: "16px", fontWeight: 600, color: "#000" }}
             >
               Посмотреть всю подборку

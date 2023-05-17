@@ -1,12 +1,21 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { getProduct } from './getProduct';
+import {  createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
+import { Api } from "../Api";
+
+
+export const getProduct = createAsyncThunk('product/getProduct', async () => {
+  let response = await axios.get(Api +'product');
+  return response.data;
+});
+
+
 
 const productSlice = createSlice({
   name: 'product',
   initialState: {
     loading: false,
     error: null,
-    data: null,
+    data: [],
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -25,5 +34,5 @@ const productSlice = createSlice({
       });
   },
 });
+  export default productSlice
 
-export default productSlice.reducer;

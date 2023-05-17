@@ -17,7 +17,7 @@ export default function Favorites() {
 
   return (
     <Box sx={{width:"100vw",height:"100vh"}}>
-
+      
     </Box>
   )
 }

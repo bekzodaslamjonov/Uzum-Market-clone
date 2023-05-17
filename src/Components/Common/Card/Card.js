@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, {  useState } from "react";
+import { useDispatch,  } from "react-redux";
 import { actions } from "../../../Api/Favorite/Favorite.slice";
 
 export default function Card({
@@ -14,17 +14,16 @@ export default function Card({
   icon,
   descript,
 }) {
+  // const { favorites } = useSelector((state) => state);
   const dispatch = useDispatch();
   const func = ()=>{
     dispatch(actions.addToFavorites())
   }
   const [butt, setbutt] = useState(false);
-  // const { favorites } = useSelector((state) => state);
   const but = () => {
     setbutt(!butt);
-    // func()
+    func()
   };
-  // console.log(favorites);
   return (
     <Box
       sx={{
