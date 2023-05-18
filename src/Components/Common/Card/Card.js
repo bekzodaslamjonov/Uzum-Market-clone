@@ -1,8 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
-import React, {  useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getProduct, updateLikedStatus, updateProduct } from "../../../Api/ApiSlice/productSlice";
-
+import React, { useState } from "react";
 
 export default function Card({
   img,
@@ -14,26 +11,11 @@ export default function Card({
   buyBtn,
   icon,
   descript,
-  clickedFunc
 }) {
-
-
-  // const dispatch = useDispatch();
-  
   const [butt, setbutt] = useState(false);
   var but = () => {
-    // clickedFunc()
     setbutt(!butt);
-    clickedFunc()
-    // const productId = index; // Идентификатор продукта, который вы хотите обновить
-    // dispatch(updateLikedStatus({ id: productId, liked: true }));
   };
-
-
-
-
-
-
 
   return (
     <Box
