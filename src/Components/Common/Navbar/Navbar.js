@@ -267,63 +267,65 @@ export default function Navbar() {
                 </Typography>
               </Button>
               <Link to={"/favorite"}>
-              <Button
-                sx={{
-                  width: "auto",
-                  height: "38px",
-                  bgcolor: "transparent",
-                  ":hover": { bgcolor: "#fafafa" },
-                  gap: "10px",
-                  fontSize: "20px",
-                  color: "#000",
-                }}
-              >
-                <i className="bx bx-heart"></i>
-                <Typography
+                <Button
                   sx={{
-                    fontSize: "14px",
-                    fontWeight: 500,
-                    display: {
-                      xs: "none",
-                      sm: "none",
-                      md: "none",
-                      lg: "none",
-                      xl: "unset",
-                    },
+                    width: "auto",
+                    height: "38px",
+                    bgcolor: "transparent",
+                    ":hover": { bgcolor: "#fafafa" },
+                    gap: "10px",
+                    fontSize: "20px",
+                    color: "#000",
                   }}
                 >
-                  Избранное
-                </Typography>
-              </Button>
+                  <i className="bx bx-heart"></i>
+                  <Typography
+                    sx={{
+                      fontSize: "14px",
+                      fontWeight: 500,
+                      display: {
+                        xs: "none",
+                        sm: "none",
+                        md: "none",
+                        lg: "none",
+                        xl: "unset",
+                      },
+                    }}
+                  >
+                    Избранное
+                  </Typography>
+                </Button>
               </Link>
-              <Button
-                sx={{
-                  width: "auto",
-                  height: "38px",
-                  bgcolor: "transparent",
-                  ":hover": { bgcolor: "#fafafa" },
-                  gap: "10px",
-                  fontSize: "20px",
-                  color: "#000",
-                }}
-              >
-                <i className="bx bx-shopping-bag"></i>
-                <Typography
+              <Link to={'Shop'}>
+                <Button
                   sx={{
-                    fontSize: "14px",
-                    fontWeight: 500,
-                    display: {
-                      xs: "none",
-                      sm: "none",
-                      md: "none",
-                      lg: "none",
-                      xl: "unset",
-                    },
+                    width: "auto",
+                    height: "38px",
+                    bgcolor: "transparent",
+                    ":hover": { bgcolor: "#fafafa" },
+                    gap: "10px",
+                    fontSize: "20px",
+                    color: "#000",
                   }}
                 >
-                  Корзина
-                </Typography>
-              </Button>
+                  <i className="bx bx-shopping-bag"></i>
+                  <Typography
+                    sx={{
+                      fontSize: "14px",
+                      fontWeight: 500,
+                      display: {
+                        xs: "none",
+                        sm: "none",
+                        md: "none",
+                        lg: "none",
+                        xl: "unset",
+                      },
+                    }}
+                  >
+                    Корзина
+                  </Typography>
+                </Button>
+              </Link>
             </Box>
           </Box>
           {/* navigation links */}
