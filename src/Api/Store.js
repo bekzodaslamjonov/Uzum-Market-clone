@@ -1,12 +1,10 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { reducer as favoriteReducer } from './Favorite/Favorite.slice';
-import productSlice from "./ApiSlice/productSlice";
-// import favReducer from "./Favorite/Favorite.slice";
-const rootReducers = combineReducers({
-    product:productSlice.reducer,
-    favoriteReducer:favoriteReducer
-  });
+import {  configureStore } from "@reduxjs/toolkit";
+import { productsApi } from "./RTKApi/RTKApi";
+
 export default configureStore({
-  reducer:  rootReducers ,
+  reducer:  {
+    [productsApi.reducerPath]:productsApi.reducer
+  },
+  middleware:(getDefaultMiddleware)=>getDefaultMiddleware().concat(productsApi.middleware),
   devTools: true,
 });

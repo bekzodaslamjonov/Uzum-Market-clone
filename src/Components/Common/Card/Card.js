@@ -1,7 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
-import React, {  useState } from "react";
-import { useDispatch,  } from "react-redux";
-import { actions } from "../../../Api/Favorite/Favorite.slice";
+import React, {  useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getProduct, updateLikedStatus, updateProduct } from "../../../Api/ApiSlice/productSlice";
+
 
 export default function Card({
   img,
@@ -13,17 +14,27 @@ export default function Card({
   buyBtn,
   icon,
   descript,
+  clickedFunc
 }) {
-  // const { favorites } = useSelector((state) => state);
-  const dispatch = useDispatch();
-  const func = ()=>{
-    dispatch(actions.addToFavorites())
-  }
+
+
+  // const dispatch = useDispatch();
+  
   const [butt, setbutt] = useState(false);
-  const but = () => {
+  var but = () => {
+    // clickedFunc()
     setbutt(!butt);
-    func()
+    clickedFunc()
+    // const productId = index; // Идентификатор продукта, который вы хотите обновить
+    // dispatch(updateLikedStatus({ id: productId, liked: true }));
   };
+
+
+
+
+
+
+
   return (
     <Box
       sx={{
@@ -66,6 +77,7 @@ export default function Card({
         }}
       >
         {/* dispatch(actions.addToFavorites()) */}
+        {/* <Button sx={{width:"50px",height:"50px"}}> */}
         <Typography
           onClick={but}
           sx={{
@@ -83,6 +95,7 @@ export default function Card({
             <i className="bx bxs-heart"></i>
           )}
         </Typography>
+        {/* </Button> */}
 
         <Box
           sx={{

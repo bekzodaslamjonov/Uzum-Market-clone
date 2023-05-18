@@ -1,18 +1,18 @@
 import { Box, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Slides from "../Common/Slides/Slides";
-import axios from "axios";
-import { Api } from "../../Api/Api";
+import { useGetProductsQuery } from "../../Api/RTKApi/RTKApi";
 
 export default function Rasrochka() {
-  // let [product, setProduct] = useState([]);
   let product =[]
-  let [data, setdata] = useState([]);
-  useEffect(() => {
-    axios.get(Api + "product").then((res) => setdata(res.data));
-  }, []);
+
+  const { data = [], isLoading } = useGetProductsQuery();
+
+  if (isLoading) return <div>Loading...</div>;
+
   product = data.filter((item) => item.type === "rasrochka");
+
   return (
     <>
       <Box

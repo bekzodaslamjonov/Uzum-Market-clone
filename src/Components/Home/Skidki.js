@@ -1,35 +1,26 @@
 import { Box, Button, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import Card from "../Common/Card/Card";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { getProduct } from "../../Api/ApiSlice/productSlice";
+import { useGetProductsQuery } from "../../Api/RTKApi/RTKApi";
 
 export default function Skidki() {
-  // let [product,setProduct]= useState([]);
-  // let product = [];
-  let data1 = [];
+  let product = [];
   let [showBtn, setShowBtn] = useState("flex");
   let [hiddenBtn, setHiddenBtn] = useState("none");
   let [toggle, setToggle] = useState(true);
-
-  // useEffect(() => {
-  //   axios.get(Api + "product").then((res) => setData(res.data));
-  // }, []);
-
-  var product1 = useSelector((state)=>state.product.data);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getProduct());
-  }, [dispatch]);
-
-  data1 = product1.filter((product)=>product.type ==="skidki")
+  const { data = [], isLoading } = useGetProductsQuery();
   const showAll = () => {
     setShowBtn("none");
     setHiddenBtn("flex");
     setToggle(!toggle);
   };
+
+  product = data.filter((item) => item.type === "skidki");
+
+  if (isLoading) return <div>Loading...</div>;
+
   return (
     <>
       <Box
@@ -66,7 +57,7 @@ export default function Skidki() {
         }}
       >
         {!toggle
-          ? data1.map((item, index) => (
+          ? product.map((item, index) => (
               <Card
                 key={index}
                 img={item.img}
@@ -79,7 +70,7 @@ export default function Skidki() {
                 descript={item.descript}
               />
             ))
-          : data1
+          : product
               .splice(0, 20)
               .map((item, index) => (
                 <Card

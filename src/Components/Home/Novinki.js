@@ -1,23 +1,20 @@
 import { Box, Button, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import { Api } from "../../Api/Api";
-import axios from "axios";
+import React, { useState } from "react";
 import Card from "../Common/Card/Card";
 import { Link } from "react-router-dom";
+import { useGetProductsQuery } from "../../Api/RTKApi/RTKApi";
 
 export default function Novinki() {
   let product =[]
-  let [data,setData]=useState([])
   let [showBtn, setShowBtn] = useState("flex");
   let [hiddenBtn, setHiddenBtn] = useState("none");
   let [toggle, setToggle] = useState(true);
+
+  const { data = [], isLoading } = useGetProductsQuery();
   
-  useEffect(() => {
-    axios
-      .get(Api + "product")
-      .then((res) => setData(res.data));
-  }, []);
-    product=data.filter((item) => item.type === "skidki")
+
+  if (isLoading) return <div>Loading...</div>;
+  product=data.filter((item) => item.type === "novinki")
 
   const showAll = () => {
     setToggle(!toggle)
