@@ -9,13 +9,13 @@ export default function Card({
   star,
   ocenka,
   buyBtn,
-  icon,
   descript,
-}) {
-  const [butt, setbutt] = useState(false);
-  var but = () => {
-    setbutt(!butt);
-  };
+  handleupdate
+}){
+  
+  let [icon,setIcon]=useState(false)
+    
+
 
   return (
     <Box
@@ -58,26 +58,30 @@ export default function Card({
           position: "relative",
         }}
       >
-        {/* dispatch(actions.addToFavorites()) */}
-        {/* <Button sx={{width:"50px",height:"50px"}}> */}
-        <Typography
-          onClick={but}
+        <Button
+          onClick={handleupdate}
           sx={{
-            fontSize: "25px",
-            color: "#5000aa",
             position: "absolute",
             right: "6px",
             top: "10px",
             cursor: "pointer",
+            backgroundColor:"transparent",
+            ':hover':{backgroundColor:"transparent"}
           }}
         >
-          {!butt ? (
-            <i className="bx bx-heart"></i>
-          ) : (
-            <i className="bx bxs-heart"></i>
-          )}
-        </Typography>
-        {/* </Button> */}
+          <Typography
+            sx={{
+              fontSize: "25px",
+              color: "#5000aa",
+            }}
+          >
+            { icon ? (
+              <i className="bx bxs-heart"></i>
+              ) : (
+                <i className="bx bx-heart"></i>
+                )}
+          </Typography>
+        </Button>
 
         <Box
           sx={{

@@ -8,7 +8,15 @@
     endpoints:(build)=>({
         getProducts:build.query({
             query:() =>`product`,
-        })
+        }),
+        // addToFavorites:build.mutation({
+        //     method:'PUT',
+        //     query:(data) =>({
+        //         url:`product/${data.id}`,
+        //         body:data.payload
+        //     }),
+
+        // })
     })
  }) 
 export const {useGetProductsQuery} = productsApi;

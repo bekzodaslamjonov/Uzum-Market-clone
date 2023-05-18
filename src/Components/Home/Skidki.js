@@ -3,26 +3,45 @@ import React, { useState } from "react";
 
 import Card from "../Common/Card/Card";
 import { Link } from "react-router-dom";
-import { useGetProductsQuery } from "../../Api/RTKApi/RTKApi";
+import {
+  useGetProductsQuery,
+} from "../../Api/RTKApi/RTKApi";
 
 export default function Skidki() {
   let product = [];
   let [showBtn, setShowBtn] = useState("flex");
   let [hiddenBtn, setHiddenBtn] = useState("none");
   let [toggle, setToggle] = useState(true);
-  const { data = [], isLoading } = useGetProductsQuery();
+  let [liked,setLiked]  = useState([])
+  const { data = [], isLoading,isError} = useGetProductsQuery();
+ 
   const showAll = () => {
     setShowBtn("none");
     setHiddenBtn("flex");
     setToggle(!toggle);
   };
-
   product = data.filter((item) => item.type === "skidki");
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading)
+   return <div>Loading...</div>;
+  if (isError) {
+    return <div>Error occurred.</div>;
+  }
+
+  var handleupdate = (index)=>{
+    let obj = product[index]
+    liked.push(obj)
+    localStorage.setItem('liked', JSON.stringify(liked))
+    console.log(obj);
+    setLiked(liked)
+  }
+
+ 
+
 
   return (
     <>
+  
       <Box
         sx={{
           width: "100%",
@@ -66,8 +85,8 @@ export default function Skidki() {
                 price={item.price}
                 ocenka={item.ocenka}
                 star={item.star}
-                icon={item.activeIcon}
                 descript={item.descript}
+                handleupdate={()=>handleupdate(index)}
               />
             ))
           : product
@@ -81,8 +100,8 @@ export default function Skidki() {
                   price={item.price}
                   ocenka={item.ocenka}
                   star={item.star}
-                  icon={item.activeIcon}
                   descript={item.descript}
+                  handleupdate={()=>handleupdate(index)}
                 />
               ))}
       </Box>

@@ -9,8 +9,8 @@ export default function router() {
   return (
     <Routes>
       <Route path={"/"} element={<Home />} />
-      <Route path={"/:category"} element={<Product />} />
       <Route path={"favorite"} element={<Favorites />} />
+      <Route path={"/:category"} element={<Product />} />
       <Route path={"*"} element={<NotFound />} />
     </Routes>
   );
